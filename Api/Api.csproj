@@ -1,0 +1,12 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <RootNamespace>OpenPay.$(MSBuildProjectName.Replace(" ", "_"))</RootNamespace>
+    <AssemblyName>OpenPay.$(MSBuildProjectName)</AssemblyName>
+    <OutputType>Library</OutputType>
+  </PropertyGroup>
+
+</Project>

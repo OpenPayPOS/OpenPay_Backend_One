@@ -91,6 +91,19 @@
         "frameworkReferences": [
           "Microsoft.AspNetCore.App"
         ]
+      },
+      "OpenPay.Api/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/OpenPay.Api.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/OpenPay.Api.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
       }
     }
   },
@@ -426,10 +439,16 @@
         "swashbuckle.aspnetcore.swaggerui.7.2.0.nupkg.sha512",
         "swashbuckle.aspnetcore.swaggerui.nuspec"
       ]
+    },
+    "OpenPay.Api/1.0.0": {
+      "type": "project",
+      "path": "../Api/Api.csproj",
+      "msbuildProject": "../Api/Api.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net8.0": [
+      "OpenPay.Api >= 1.0.0",
       "Swashbuckle.AspNetCore >= 7.2.0"
     ]
   },
@@ -440,7 +459,7 @@
     "version": "1.0.0",
     "restore": {
       "projectUniqueName": "C:\\Users\\marti\\Code\\OpenPay\\V1\\Backend\\Startup\\Startup.csproj",
-      "projectName": "Startup",
+      "projectName": "OpenPay.Startup",
       "projectPath": "C:\\Users\\marti\\Code\\OpenPay\\V1\\Backend\\Startup\\Startup.csproj",
       "packagesPath": "C:\\Users\\marti\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\marti\\Code\\OpenPay\\V1\\Backend\\Startup\\obj\\",
@@ -459,7 +478,11 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\marti\\Code\\OpenPay\\V1\\Backend\\Api\\Api.csproj": {
+              "projectPath": "C:\\Users\\marti\\Code\\OpenPay\\V1\\Backend\\Api\\Api.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 
-namespace Startup.Controllers;
+namespace OpenPay.Api.Controllers;
 
 [Route("api/[controller]")]
 [ApiController]

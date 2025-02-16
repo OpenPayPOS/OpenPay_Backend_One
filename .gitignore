@@ -1,0 +1,10 @@
+.suo
+*.vsidx
+*.cache
+*.dll
+*.exe
+*.pdb
+
+Debug/
+Release/
+appsettings.json

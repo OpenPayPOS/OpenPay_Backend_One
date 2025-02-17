@@ -23,7 +23,7 @@ public class GetByIdAsync
 
         Guid id = Guid.NewGuid();
 
-        _repository.GetByIdAsync(id).Returns(new Optional<ItemDataDTO?>());
+        _repository.GetByIdAsync(id).Returns(new Optional<ItemDataDTO>());
         _repository.IdExistsAsync(id).Returns(false);
 
         // Act
@@ -35,11 +35,9 @@ public class GetByIdAsync
         response.Handle(_ =>
         {
             Assert.Fail();
-            return new OkResult();
         }, ex =>
         {
             Assert.IsType<NotFoundException>(ex);
-            return new OkResult();
         });
     }
 
@@ -70,11 +68,9 @@ public class GetByIdAsync
         response.Handle(item =>
         {
             Assert.Equal(item.Id, id);
-            return new OkResult();
         }, _ =>
         {
             Assert.Fail();
-            return new OkResult();
         });
     }
 }

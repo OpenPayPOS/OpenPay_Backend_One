@@ -43,11 +43,9 @@ public class CreateAsync
         response.Handle(value =>
         {
             Assert.Equal(id, value.Id);
-            return new OkResult();
         }, _ =>
         {
             Assert.Fail();
-            return new OkResult();
         });
     }
 
@@ -77,11 +75,9 @@ public class CreateAsync
         response.Handle(_ =>
         {
             Assert.Fail();
-            return new OkResult();
         }, ex =>
         {
             Assert.IsType<BadRequestException>(ex);
-            return new OkResult();
         });
     }
 }

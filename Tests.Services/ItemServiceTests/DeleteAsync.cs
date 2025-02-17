@@ -1,4 +1,5 @@
 ﻿using Interfaces.Common.Exceptions;
+using Interfaces.Common.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using NSubstitute;
@@ -22,23 +23,22 @@ public class DeleteAsync
         Guid id = Guid.NewGuid();
 
         _repository.IdExistsAsync(Arg.Any<Guid>()).Returns(true);
+        _repository.DeleteAsync(Arg.Any<Guid>()).Returns(new Optional());
 
         // Act
         var response = await _service.DeleteAsync(Guid.NewGuid());
 
         // Assert
         await _repository.Received().IdExistsAsync(Arg.Any<Guid>());
-        await _repository.Received().DeleteAsync(Arg.Any<Guid>(), Arg.Any<EditItemDataDTO>());
+        await _repository.Received().DeleteAsync(Arg.Any<Guid>());
         await _unitOfWork.Received().SaveChangesAsync();
 
 
         response.Handle(_ =>
         {
-            return new OkResult();
         }, _ =>
         {
             Assert.Fail();
-            return new OkResult();
         });
     }
 
@@ -60,18 +60,16 @@ public class DeleteAsync
 
         // Assert
         await _repository.Received().IdExistsAsync(Arg.Any<Guid>());
-        await _repository.DidNotReceive().DeleteAsync(Arg.Any<Guid>(), Arg.Any<EditItemDataDTO>());
+        await _repository.DidNotReceive().DeleteAsync(Arg.Any<Guid>());
         await _unitOfWork.DidNotReceive().SaveChangesAsync();
 
 
         response.Handle(_ =>
         {
             Assert.Fail();
-            return new OkResult();
         }, ex =>
         {
             Assert.IsType<NotFoundException>(ex);
-            return new OkResult();
         });
     }
 }

@@ -65,6 +65,6 @@ public class GetAllAsync
 
         // Assert
         _repository.Received().GetAllAsync();
-        Assert.Empty(items);
+        Assert.NotEmpty(items);
     }
 }

@@ -29,9 +29,23 @@ public class Optional<T>
 
     public static implicit operator Optional<T>(T input) => new(input);
     public static implicit operator Optional<T>(Exception ex) => new(ex);
+    public static implicit operator Exception?(Optional<T> optional) => optional._exception;
 
 #pragma warning disable CS8604 // Possible null reference argument.
-    public ActionResult Handle(Func<T, ActionResult> success, Func<Exception, ActionResult> fail)
+
+    public void Handle(Action<T> success, Action<Exception> fail)
+    {
+        if (IsValid)
+        {
+            success(_value);
+        }
+        else
+        {
+            fail(_exception);
+        }
+    }
+
+    public TOut Handle<TOut>(Func<T, TOut> success, Func<Exception, TOut> fail)
     {
         if (IsValid)
         {
@@ -43,7 +57,43 @@ public class Optional<T>
         }
     }
 
-    public async Task<ActionResult> HandleAsync<TOut>(Func<T, Task<TOut>> success, Func<Exception, ActionResult> fail)
+    public ActionResult ProduceResult(Func<T, ActionResult> success, Func<Exception, ActionResult> fail)
+    {
+        if (IsValid)
+        {
+            return success(_value);
+        }
+        else
+        {
+            return fail(_exception);
+        }
+    }
+
+    public async Task HandleAsync(Func<T, Task> success, Action<Exception> fail)
+    {
+        if (IsValid)
+        {
+            await success(_value);
+        }
+        else
+        {
+            fail(_exception);
+        }
+    }
+
+    public async Task<TOut> HandleAsync<TOut>(Func<T, Task<TOut>> success, Func<Exception, TOut> fail)
+    {
+        if (IsValid)
+        {
+            return await success(_value);
+        }
+        else
+        {
+            return fail(_exception);
+        }
+    }
+
+    public async Task<ActionResult> ProduceResultAsync<TOut>(Func<T, Task<TOut>> success, Func<Exception, ActionResult> fail)
     {
         if (IsValid)
         {
@@ -61,7 +111,7 @@ public class Optional<T>
         }
     }
 
-    public async Task<ActionResult> HandleAsync(Func<T, Task<ActionResult>> success, Func<Exception, Task<ActionResult>> fail)
+    public async Task<ActionResult> ProduceResultAsync(Func<T, Task<ActionResult>> success, Func<Exception, Task<ActionResult>> fail)
     {
         if (IsValid)
         {

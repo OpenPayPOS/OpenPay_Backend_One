@@ -1,4 +1,5 @@
 ﻿using Interfaces.Common.Exceptions;
+using Interfaces.Common.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using NSubstitute;
@@ -23,6 +24,7 @@ public class EditAsync
 
         _repository.NameExistsAsync("test").Returns(false);
         _repository.IdExistsAsync(Arg.Any<Guid>()).Returns(true);
+        _repository.GetByIdAsync(Arg.Any<Guid>()).Returns(new Optional<ItemDataDTO>());
         _repository.EditAsync(Arg.Any<Guid>(), Arg.Any<EditItemDataDTO>()).Returns(new ItemDataDTO
         {
             Id = id,
@@ -43,11 +45,9 @@ public class EditAsync
         response.Handle(value =>
         {
             Assert.Equal(id, value.Id);
-            return new OkResult();
         }, _ =>
         {
             Assert.Fail();
-            return new OkResult();
         });
     }
 
@@ -78,11 +78,9 @@ public class EditAsync
         response.Handle(_ =>
         {
             Assert.Fail();
-            return new OkResult();
         }, ex =>
         {
             Assert.IsType<BadRequestException>(ex);
-            return new OkResult();
         });
     }
 
@@ -112,11 +110,9 @@ public class EditAsync
         response.Handle(_ =>
         {
             Assert.Fail();
-            return new OkResult();
         }, ex =>
         {
             Assert.IsType<NotFoundException>(ex);
-            return new OkResult();
         });
     }
 }

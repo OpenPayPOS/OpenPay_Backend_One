@@ -24,7 +24,6 @@ public class GetByIdAsync
         // Assert
         Assert.IsType<BadRequestObjectResult>(response.Result);
         await _service.DidNotReceive().GetByIdAsync(Arg.Any<Guid>());
-        await _service.DidNotReceive().IdExistsAsync(Arg.Any<Guid>());
     }
 
     [Fact]
@@ -56,7 +55,6 @@ public class GetByIdAsync
         ItemsController itemsController = new ItemsController(_service, _logger);
 
         Guid id = Guid.NewGuid();
-        _service.IdExistsAsync(id).Returns(Task.FromResult(new Optional<bool>(true)));
         _service.GetByIdAsync(id).Returns(Task.FromResult(new Optional<ItemDTO>(new ItemDTO
         {
             Id = id, Name = "test", Price = 10, TaxPercentage = 10

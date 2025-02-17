@@ -1,0 +1,24 @@
+name: Deploy
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    uses: ./.github/workflows/build.yml
+
+  deploy:
+    name: deploy
+    needs: [build]
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+    - name: Build the Docker image
+      run: docker build . --tag martijnkop/openpay-backend:latest
+    - name: Push image to docker hub
+      run: |
+        docker push martijnkop/openpay-backend:latest

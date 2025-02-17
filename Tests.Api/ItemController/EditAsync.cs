@@ -161,9 +161,7 @@ public class EditAsync
 
         // Assert
         Assert.IsType<BadRequestObjectResult>(result.Result);
-        await _service.DidNotReceive().NameExistsAsync(Arg.Any<string>());
         await _service.DidNotReceive().EditAsync(Arg.Any<Guid>(), Arg.Any<string?>(), Arg.Any<decimal?>(), Arg.Any<decimal?>());
-        await _service.DidNotReceive().IdExistsAsync(Arg.Any<Guid>());
 
     }
 

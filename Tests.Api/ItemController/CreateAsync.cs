@@ -82,7 +82,6 @@ public class CreateAsync
         ItemsController itemsController = new ItemsController(_service, _logger);
 
         var model = new CreateItemRequest { Name = RandomString.Random(3, 255), Price = 10, TaxPercentage = 1 };
-        _service.NameExistsAsync(model.Name).Returns(Task.FromResult(new Optional<bool>(true)));
 
         _service.CreateAsync(model.Name, model.Price, model.TaxPercentage)
             .Returns(Task.FromResult(new Optional<ItemDTO>(new ItemDTO

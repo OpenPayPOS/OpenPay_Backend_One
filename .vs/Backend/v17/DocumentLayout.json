@@ -3,28 +3,28 @@
   "WorkspaceRootPath": "C:\\Users\\marti\\Code\\OpenPay\\V1\\Backend\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{2E6FE9BD-A9C5-4AEB-B817-8345DD0D0077}|Api\\Api.csproj|c:\\users\\marti\\code\\openpay\\v1\\backend\\api\\controllers\\v1\\itemscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2E6FE9BD-A9C5-4AEB-B817-8345DD0D0077}|Api\\Api.csproj|solutionrelative:api\\controllers\\v1\\itemscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2E6FE9BD-A9C5-4AEB-B817-8345DD0D0077}|Api\\Api.csproj|c:\\users\\marti\\code\\openpay\\v1\\backend\\api\\models\\request\\createitemrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2E6FE9BD-A9C5-4AEB-B817-8345DD0D0077}|Api\\Api.csproj|solutionrelative:api\\models\\request\\createitemrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2E6FE9BD-A9C5-4AEB-B817-8345DD0D0077}|Api\\Api.csproj|c:\\users\\marti\\code\\openpay\\v1\\backend\\api\\models\\v1\\response\\itemresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2E6FE9BD-A9C5-4AEB-B817-8345DD0D0077}|Api\\Api.csproj|solutionrelative:api\\models\\v1\\response\\itemresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2E6FE9BD-A9C5-4AEB-B817-8345DD0D0077}|Api\\Api.csproj|c:\\users\\marti\\code\\openpay\\v1\\backend\\api\\models\\request\\edititemrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2E6FE9BD-A9C5-4AEB-B817-8345DD0D0077}|Api\\Api.csproj|solutionrelative:api\\models\\request\\edititemrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2E6FE9BD-A9C5-4AEB-B817-8345DD0D0077}|Api\\Api.csproj|c:\\users\\marti\\code\\openpay\\v1\\backend\\api\\models\\v1\\request\\edititemrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2E6FE9BD-A9C5-4AEB-B817-8345DD0D0077}|Api\\Api.csproj|solutionrelative:api\\models\\v1\\request\\edititemrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2E6FE9BD-A9C5-4AEB-B817-8345DD0D0077}|Api\\Api.csproj|c:\\users\\marti\\code\\openpay\\v1\\backend\\api\\models\\response\\itemresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2E6FE9BD-A9C5-4AEB-B817-8345DD0D0077}|Api\\Api.csproj|solutionrelative:api\\models\\response\\itemresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2E6FE9BD-A9C5-4AEB-B817-8345DD0D0077}|Api\\Api.csproj|c:\\users\\marti\\code\\openpay\\v1\\backend\\api\\models\\v1\\request\\createitemrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2E6FE9BD-A9C5-4AEB-B817-8345DD0D0077}|Api\\Api.csproj|solutionrelative:api\\models\\v1\\request\\createitemrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2E6FE9BD-A9C5-4AEB-B817-8345DD0D0077}|Api\\Api.csproj|c:\\users\\marti\\code\\openpay\\v1\\backend\\api\\controllers\\itemscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2E6FE9BD-A9C5-4AEB-B817-8345DD0D0077}|Api\\Api.csproj|solutionrelative:api\\controllers\\itemscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2E6FE9BD-A9C5-4AEB-B817-8345DD0D0077}|Api\\Api.csproj|c:\\users\\marti\\code\\openpay\\v1\\backend\\api\\models\\annotations\\validprice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2E6FE9BD-A9C5-4AEB-B817-8345DD0D0077}|Api\\Api.csproj|solutionrelative:api\\models\\annotations\\validprice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2E6FE9BD-A9C5-4AEB-B817-8345DD0D0077}|Api\\Api.csproj|c:\\users\\marti\\code\\openpay\\v1\\backend\\api\\configuration\\globalusings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2E6FE9BD-A9C5-4AEB-B817-8345DD0D0077}|Api\\Api.csproj|solutionrelative:api\\configuration\\globalusings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2E6FE9BD-A9C5-4AEB-B817-8345DD0D0077}|Api\\Api.csproj|c:\\users\\marti\\code\\openpay\\v1\\backend\\api\\controllers\\testcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2E6FE9BD-A9C5-4AEB-B817-8345DD0D0077}|Api\\Api.csproj|solutionrelative:api\\controllers\\testcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2E6FE9BD-A9C5-4AEB-B817-8345DD0D0077}|Api\\Api.csproj|c:\\users\\marti\\code\\openpay\\v1\\backend\\api\\configuration\\iwebassemblyloader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -54,50 +54,63 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
+              "Title": "ValidPrice.cs",
+              "DocumentMoniker": "C:\\Users\\marti\\Code\\OpenPay\\V1\\Backend\\Api\\Models\\Annotations\\ValidPrice.cs",
+              "RelativeDocumentMoniker": "Api\\Models\\Annotations\\ValidPrice.cs",
+              "ToolTip": "C:\\Users\\marti\\Code\\OpenPay\\V1\\Backend\\Api\\Models\\Annotations\\ValidPrice.cs",
+              "RelativeToolTip": "Api\\Models\\Annotations\\ValidPrice.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAXAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-16T23:40:05.091Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "ItemResponse.cs",
-              "DocumentMoniker": "C:\\Users\\marti\\Code\\OpenPay\\V1\\Backend\\Api\\Models\\V1\\Response\\ItemResponse.cs",
-              "RelativeDocumentMoniker": "Api\\Models\\V1\\Response\\ItemResponse.cs",
-              "ToolTip": "C:\\Users\\marti\\Code\\OpenPay\\V1\\Backend\\Api\\Models\\V1\\Response\\ItemResponse.cs",
-              "RelativeToolTip": "Api\\Models\\V1\\Response\\ItemResponse.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "DocumentMoniker": "C:\\Users\\marti\\Code\\OpenPay\\V1\\Backend\\Api\\Models\\Response\\ItemResponse.cs",
+              "RelativeDocumentMoniker": "Api\\Models\\Response\\ItemResponse.cs",
+              "ToolTip": "C:\\Users\\marti\\Code\\OpenPay\\V1\\Backend\\Api\\Models\\Response\\ItemResponse.cs",
+              "RelativeToolTip": "Api\\Models\\Response\\ItemResponse.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAuAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-16T23:33:19.677Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "EditItemRequest.cs",
-              "DocumentMoniker": "C:\\Users\\marti\\Code\\OpenPay\\V1\\Backend\\Api\\Models\\V1\\Request\\EditItemRequest.cs",
-              "RelativeDocumentMoniker": "Api\\Models\\V1\\Request\\EditItemRequest.cs",
-              "ToolTip": "C:\\Users\\marti\\Code\\OpenPay\\V1\\Backend\\Api\\Models\\V1\\Request\\EditItemRequest.cs",
-              "RelativeToolTip": "Api\\Models\\V1\\Request\\EditItemRequest.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "DocumentMoniker": "C:\\Users\\marti\\Code\\OpenPay\\V1\\Backend\\Api\\Models\\Request\\EditItemRequest.cs",
+              "RelativeDocumentMoniker": "Api\\Models\\Request\\EditItemRequest.cs",
+              "ToolTip": "C:\\Users\\marti\\Code\\OpenPay\\V1\\Backend\\Api\\Models\\Request\\EditItemRequest.cs",
+              "RelativeToolTip": "Api\\Models\\Request\\EditItemRequest.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-16T23:33:08.787Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "CreateItemRequest.cs",
-              "DocumentMoniker": "C:\\Users\\marti\\Code\\OpenPay\\V1\\Backend\\Api\\Models\\V1\\Request\\CreateItemRequest.cs",
-              "RelativeDocumentMoniker": "Api\\Models\\V1\\Request\\CreateItemRequest.cs",
-              "ToolTip": "C:\\Users\\marti\\Code\\OpenPay\\V1\\Backend\\Api\\Models\\V1\\Request\\CreateItemRequest.cs",
-              "RelativeToolTip": "Api\\Models\\V1\\Request\\CreateItemRequest.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAAAAAA",
+              "DocumentMoniker": "C:\\Users\\marti\\Code\\OpenPay\\V1\\Backend\\Api\\Models\\Request\\CreateItemRequest.cs",
+              "RelativeDocumentMoniker": "Api\\Models\\Request\\CreateItemRequest.cs",
+              "ToolTip": "C:\\Users\\marti\\Code\\OpenPay\\V1\\Backend\\Api\\Models\\Request\\CreateItemRequest.cs",
+              "RelativeToolTip": "Api\\Models\\Request\\CreateItemRequest.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABkAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-16T23:32:20.463Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "GlobalUsings.cs",
               "DocumentMoniker": "C:\\Users\\marti\\Code\\OpenPay\\V1\\Backend\\Api\\Configuration\\GlobalUsings.cs",
               "RelativeDocumentMoniker": "Api\\Configuration\\GlobalUsings.cs",
@@ -110,13 +123,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "ItemsController.cs",
-              "DocumentMoniker": "C:\\Users\\marti\\Code\\OpenPay\\V1\\Backend\\Api\\Controllers\\V1\\ItemsController.cs",
-              "RelativeDocumentMoniker": "Api\\Controllers\\V1\\ItemsController.cs",
-              "ToolTip": "C:\\Users\\marti\\Code\\OpenPay\\V1\\Backend\\Api\\Controllers\\V1\\ItemsController.cs",
-              "RelativeToolTip": "Api\\Controllers\\V1\\ItemsController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAFAAAA",
+              "DocumentMoniker": "C:\\Users\\marti\\Code\\OpenPay\\V1\\Backend\\Api\\Controllers\\ItemsController.cs",
+              "RelativeDocumentMoniker": "Api\\Controllers\\ItemsController.cs",
+              "ToolTip": "C:\\Users\\marti\\Code\\OpenPay\\V1\\Backend\\Api\\Controllers\\ItemsController.cs",
+              "RelativeToolTip": "Api\\Controllers\\ItemsController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACIAAAAPAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-16T23:06:36.222Z",
               "EditorCaption": ""
@@ -158,19 +171,6 @@
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
               "WhenOpened": "2025-02-16T23:00:18.927Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "TestController.cs",
-              "DocumentMoniker": "C:\\Users\\marti\\Code\\OpenPay\\V1\\Backend\\Api\\Controllers\\TestController.cs",
-              "RelativeDocumentMoniker": "Api\\Controllers\\TestController.cs",
-              "ToolTip": "C:\\Users\\marti\\Code\\OpenPay\\V1\\Backend\\Api\\Controllers\\TestController.cs",
-              "RelativeToolTip": "Api\\Controllers\\TestController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-16T22:59:05.271Z",
               "EditorCaption": ""
             },
             {

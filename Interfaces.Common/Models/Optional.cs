@@ -21,10 +21,14 @@ public class Optional<T>
         _value = default;
     }
 
-#pragma warning disable CS8603 // Possible null reference return.
+    public Optional()
+    {
+        _exception = null;
+        _value = default;
+    }
+
     public static implicit operator Optional<T>(T input) => new(input);
     public static implicit operator Optional<T>(Exception ex) => new(ex);
-#pragma warning restore CS8603 // Possible null reference return.
 
 #pragma warning disable CS8604 // Possible null reference argument.
     public ActionResult Handle(Func<T, ActionResult> success, Func<Exception, ActionResult> fail)

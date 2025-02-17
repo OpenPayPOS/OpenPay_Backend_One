@@ -93,7 +93,11 @@
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\Users\\marti\\Code\\OpenPay\\V1\\Backend\\Interfaces.Common\\Interfaces.Common.csproj": {
+                "projectPath": "C:\\Users\\marti\\Code\\OpenPay\\V1\\Backend\\Interfaces.Common\\Interfaces.Common.csproj"
+              }
+            }
           }
         },
         "warningProperties": {

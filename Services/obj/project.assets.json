@@ -1250,6 +1250,9 @@
       "OpenPay.Interfaces.Data/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "Interfaces.Common": "1.0.0"
+        },
         "compile": {
           "bin/placeholder/OpenPay.Interfaces.Data.dll": {}
         },

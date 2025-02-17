@@ -9,6 +9,7 @@ using OpenPay.Services;
 namespace OpenPay.Tests.Services.ItemServiceTests;
 public class GetAllAsync
 {
+    [Fact]
     public async Task GetAllAsync_ReturnsEmptyEnumerable_IfEmpty()
     {
         // Arrange
@@ -32,7 +33,7 @@ public class GetAllAsync
         Assert.Empty(items);
 
     }
-
+    [Fact]
     public async Task GetAllAsync_ReturnsAll_IfAny()
     {
         // Arrange

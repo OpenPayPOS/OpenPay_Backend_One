@@ -3,38 +3,6 @@
   "WorkspaceRootPath": "C:\\Users\\marti\\Code\\OpenPay\\V1\\Backend\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{958E8DDB-0C1C-4886-978E-7F5D1AA21406}|Interfaces.Common\\Interfaces.Common.csproj|c:\\users\\marti\\code\\openpay\\v1\\backend\\interfaces.common\\models\\optional.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{958E8DDB-0C1C-4886-978E-7F5D1AA21406}|Interfaces.Common\\Interfaces.Common.csproj|solutionrelative:interfaces.common\\models\\optional.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{80076B37-FF0E-4EC4-BE11-868527BD3E9C}|Api\\Api.csproj|c:\\users\\marti\\code\\openpay\\v1\\backend\\api\\controllers\\itemscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{80076B37-FF0E-4EC4-BE11-868527BD3E9C}|Api\\Api.csproj|solutionrelative:api\\controllers\\itemscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{46600120-C9F5-4B00-93EB-4F0AC53AB836}|Tests.Api\\Tests.Api.csproj|c:\\users\\marti\\code\\openpay\\v1\\backend\\tests.api\\itemcontroller\\editasync.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{46600120-C9F5-4B00-93EB-4F0AC53AB836}|Tests.Api\\Tests.Api.csproj|solutionrelative:tests.api\\itemcontroller\\editasync.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{46600120-C9F5-4B00-93EB-4F0AC53AB836}|Tests.Api\\Tests.Api.csproj|c:\\users\\marti\\code\\openpay\\v1\\backend\\tests.api\\itemcontroller\\createasync.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{46600120-C9F5-4B00-93EB-4F0AC53AB836}|Tests.Api\\Tests.Api.csproj|solutionrelative:tests.api\\itemcontroller\\createasync.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0373A98A-8AD3-419C-ADE4-83A983E777EE}|Services\\Services.csproj|c:\\users\\marti\\code\\openpay\\v1\\backend\\services\\itemservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0373A98A-8AD3-419C-ADE4-83A983E777EE}|Services\\Services.csproj|solutionrelative:services\\itemservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{61490F2B-1552-4825-9DAB-378909D86E01}|Interfaces.Data\\Interfaces.Data.csproj|c:\\users\\marti\\code\\openpay\\v1\\backend\\interfaces.data\\datamodels\\itemdatadto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{61490F2B-1552-4825-9DAB-378909D86E01}|Interfaces.Data\\Interfaces.Data.csproj|solutionrelative:interfaces.data\\datamodels\\itemdatadto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FEB9A024-676E-4BEF-97D9-1B7D5085D08B}|Tests.Services\\Tests.Services.csproj|c:\\users\\marti\\code\\openpay\\v1\\backend\\tests.services\\itemservicetests\\deleteasync.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FEB9A024-676E-4BEF-97D9-1B7D5085D08B}|Tests.Services\\Tests.Services.csproj|solutionrelative:tests.services\\itemservicetests\\deleteasync.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FEB9A024-676E-4BEF-97D9-1B7D5085D08B}|Tests.Services\\Tests.Services.csproj|c:\\users\\marti\\code\\openpay\\v1\\backend\\tests.services\\itemservicetests\\editasync.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FEB9A024-676E-4BEF-97D9-1B7D5085D08B}|Tests.Services\\Tests.Services.csproj|solutionrelative:tests.services\\itemservicetests\\editasync.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{FEB9A024-676E-4BEF-97D9-1B7D5085D08B}|Tests.Services\\Tests.Services.csproj|c:\\users\\marti\\code\\openpay\\v1\\backend\\tests.services\\itemservicetests\\createasync.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FEB9A024-676E-4BEF-97D9-1B7D5085D08B}|Tests.Services\\Tests.Services.csproj|solutionrelative:tests.services\\itemservicetests\\createasync.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -47,80 +15,52 @@
       "RelativeMoniker": "D:0:0:{FEB9A024-676E-4BEF-97D9-1B7D5085D08B}|Tests.Services\\Tests.Services.csproj|solutionrelative:tests.services\\itemservicetests\\getallasync.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{61490F2B-1552-4825-9DAB-378909D86E01}|Interfaces.Data\\Interfaces.Data.csproj|c:\\users\\marti\\code\\openpay\\v1\\backend\\interfaces.data\\models\\iunitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{61490F2B-1552-4825-9DAB-378909D86E01}|Interfaces.Data\\Interfaces.Data.csproj|solutionrelative:interfaces.data\\models\\iunitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{61490F2B-1552-4825-9DAB-378909D86E01}|Interfaces.Data\\Interfaces.Data.csproj|c:\\users\\marti\\code\\openpay\\v1\\backend\\interfaces.data\\repositories\\iitemrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{61490F2B-1552-4825-9DAB-378909D86E01}|Interfaces.Data\\Interfaces.Data.csproj|solutionrelative:interfaces.data\\repositories\\iitemrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BCABCAD0-706F-4ED0-894C-7BC28E04B526}|Startup\\Startup.csproj|c:\\users\\marti\\code\\openpay\\v1\\backend\\startup\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{BCABCAD0-706F-4ED0-894C-7BC28E04B526}|Startup\\Startup.csproj|solutionrelative:startup\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A5D8A948-64A6-48BC-B8BD-A5FACDC2DDEB}|Interfaces.Services\\Interfaces.Services.csproj|c:\\users\\marti\\code\\openpay\\v1\\backend\\interfaces.services\\iitemservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A5D8A948-64A6-48BC-B8BD-A5FACDC2DDEB}|Interfaces.Services\\Interfaces.Services.csproj|solutionrelative:interfaces.services\\iitemservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{46600120-C9F5-4B00-93EB-4F0AC53AB836}|Tests.Api\\Tests.Api.csproj|c:\\users\\marti\\code\\openpay\\v1\\backend\\tests.api\\itemcontroller\\deleteasync.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{46600120-C9F5-4B00-93EB-4F0AC53AB836}|Tests.Api\\Tests.Api.csproj|solutionrelative:tests.api\\itemcontroller\\deleteasync.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{46600120-C9F5-4B00-93EB-4F0AC53AB836}|Tests.Api\\Tests.Api.csproj|c:\\users\\marti\\code\\openpay\\v1\\backend\\tests.api\\itemcontroller\\getallasync.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{46600120-C9F5-4B00-93EB-4F0AC53AB836}|Tests.Api\\Tests.Api.csproj|solutionrelative:tests.api\\itemcontroller\\getallasync.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BCABCAD0-706F-4ED0-894C-7BC28E04B526}|Startup\\Startup.csproj|c:\\users\\marti\\code\\openpay\\v1\\backend\\startup\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BCABCAD0-706F-4ED0-894C-7BC28E04B526}|Startup\\Startup.csproj|solutionrelative:startup\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BCABCAD0-706F-4ED0-894C-7BC28E04B526}|Startup\\Startup.csproj|c:\\users\\marti\\code\\openpay\\v1\\backend\\startup\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{BCABCAD0-706F-4ED0-894C-7BC28E04B526}|Startup\\Startup.csproj|solutionrelative:startup\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{46600120-C9F5-4B00-93EB-4F0AC53AB836}|Tests.Api\\Tests.Api.csproj|c:\\users\\marti\\code\\openpay\\v1\\backend\\tests.api\\itemcontroller\\getbyidasync.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{46600120-C9F5-4B00-93EB-4F0AC53AB836}|Tests.Api\\Tests.Api.csproj|solutionrelative:tests.api\\itemcontroller\\getbyidasync.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{958E8DDB-0C1C-4886-978E-7F5D1AA21406}|Interfaces.Common\\Interfaces.Common.csproj|c:\\users\\marti\\code\\openpay\\v1\\backend\\interfaces.common\\exceptions\\badrequestexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{958E8DDB-0C1C-4886-978E-7F5D1AA21406}|Interfaces.Common\\Interfaces.Common.csproj|solutionrelative:interfaces.common\\exceptions\\badrequestexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FEB9A024-676E-4BEF-97D9-1B7D5085D08B}|Tests.Services\\Tests.Services.csproj|c:\\users\\marti\\code\\openpay\\v1\\backend\\tests.services\\itemservicetests\\editasync.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FEB9A024-676E-4BEF-97D9-1B7D5085D08B}|Tests.Services\\Tests.Services.csproj|solutionrelative:tests.services\\itemservicetests\\editasync.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{958E8DDB-0C1C-4886-978E-7F5D1AA21406}|Interfaces.Common\\Interfaces.Common.csproj|c:\\users\\marti\\code\\openpay\\v1\\backend\\interfaces.common\\exceptions\\notfoundexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{958E8DDB-0C1C-4886-978E-7F5D1AA21406}|Interfaces.Common\\Interfaces.Common.csproj|solutionrelative:interfaces.common\\exceptions\\notfoundexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FEB9A024-676E-4BEF-97D9-1B7D5085D08B}|Tests.Services\\Tests.Services.csproj|c:\\users\\marti\\code\\openpay\\v1\\backend\\tests.services\\itemservicetests\\deleteasync.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FEB9A024-676E-4BEF-97D9-1B7D5085D08B}|Tests.Services\\Tests.Services.csproj|solutionrelative:tests.services\\itemservicetests\\deleteasync.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{80076B37-FF0E-4EC4-BE11-868527BD3E9C}|Api\\Api.csproj|c:\\users\\marti\\code\\openpay\\v1\\backend\\api\\models\\response\\itemresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{80076B37-FF0E-4EC4-BE11-868527BD3E9C}|Api\\Api.csproj|solutionrelative:api\\models\\response\\itemresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{46600120-C9F5-4B00-93EB-4F0AC53AB836}|Tests.Api\\Tests.Api.csproj|c:\\users\\marti\\code\\openpay\\v1\\backend\\tests.api\\itemcontroller\\createasync.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{46600120-C9F5-4B00-93EB-4F0AC53AB836}|Tests.Api\\Tests.Api.csproj|solutionrelative:tests.api\\itemcontroller\\createasync.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{80076B37-FF0E-4EC4-BE11-868527BD3E9C}|Api\\Api.csproj|c:\\users\\marti\\code\\openpay\\v1\\backend\\api\\models\\annotations\\validprice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{80076B37-FF0E-4EC4-BE11-868527BD3E9C}|Api\\Api.csproj|solutionrelative:api\\models\\annotations\\validprice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0373A98A-8AD3-419C-ADE4-83A983E777EE}|Services\\Services.csproj|c:\\users\\marti\\code\\openpay\\v1\\backend\\services\\itemservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0373A98A-8AD3-419C-ADE4-83A983E777EE}|Services\\Services.csproj|solutionrelative:services\\itemservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{958E8DDB-0C1C-4886-978E-7F5D1AA21406}|Interfaces.Common\\Interfaces.Common.csproj|c:\\users\\marti\\code\\openpay\\v1\\backend\\interfaces.common\\models\\none.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{958E8DDB-0C1C-4886-978E-7F5D1AA21406}|Interfaces.Common\\Interfaces.Common.csproj|solutionrelative:interfaces.common\\models\\none.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{61490F2B-1552-4825-9DAB-378909D86E01}|Interfaces.Data\\Interfaces.Data.csproj|c:\\users\\marti\\code\\openpay\\v1\\backend\\interfaces.data\\repositories\\iitemrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{61490F2B-1552-4825-9DAB-378909D86E01}|Interfaces.Data\\Interfaces.Data.csproj|solutionrelative:interfaces.data\\repositories\\iitemrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{80076B37-FF0E-4EC4-BE11-868527BD3E9C}|Api\\Api.csproj|c:\\users\\marti\\code\\openpay\\v1\\backend\\api\\models\\request\\createitemrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{80076B37-FF0E-4EC4-BE11-868527BD3E9C}|Api\\Api.csproj|solutionrelative:api\\models\\request\\createitemrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{61490F2B-1552-4825-9DAB-378909D86E01}|Interfaces.Data\\Interfaces.Data.csproj|c:\\users\\marti\\code\\openpay\\v1\\backend\\interfaces.data\\datamodels\\edititemdatadto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{61490F2B-1552-4825-9DAB-378909D86E01}|Interfaces.Data\\Interfaces.Data.csproj|solutionrelative:interfaces.data\\datamodels\\edititemdatadto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{46600120-C9F5-4B00-93EB-4F0AC53AB836}|Tests.Api\\Tests.Api.csproj|c:\\users\\marti\\code\\openpay\\v1\\backend\\tests.api\\helpers\\modelvalidationhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{46600120-C9F5-4B00-93EB-4F0AC53AB836}|Tests.Api\\Tests.Api.csproj|solutionrelative:tests.api\\helpers\\modelvalidationhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{61490F2B-1552-4825-9DAB-378909D86E01}|Interfaces.Data\\Interfaces.Data.csproj|c:\\users\\marti\\code\\openpay\\v1\\backend\\interfaces.data\\datamodels\\itemdatadto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{61490F2B-1552-4825-9DAB-378909D86E01}|Interfaces.Data\\Interfaces.Data.csproj|solutionrelative:interfaces.data\\datamodels\\itemdatadto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{46600120-C9F5-4B00-93EB-4F0AC53AB836}|Tests.Api\\Tests.Api.csproj|c:\\users\\marti\\code\\openpay\\v1\\backend\\tests.api\\helpers\\randomstring.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{46600120-C9F5-4B00-93EB-4F0AC53AB836}|Tests.Api\\Tests.Api.csproj|solutionrelative:tests.api\\helpers\\randomstring.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{958E8DDB-0C1C-4886-978E-7F5D1AA21406}|Interfaces.Common\\Interfaces.Common.csproj|c:\\users\\marti\\code\\openpay\\v1\\backend\\interfaces.common\\models\\optional.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{958E8DDB-0C1C-4886-978E-7F5D1AA21406}|Interfaces.Common\\Interfaces.Common.csproj|solutionrelative:interfaces.common\\models\\optional.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{46600120-C9F5-4B00-93EB-4F0AC53AB836}|Tests.Api\\Tests.Api.csproj|c:\\users\\marti\\code\\openpay\\v1\\backend\\tests.api\\globalusings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{46600120-C9F5-4B00-93EB-4F0AC53AB836}|Tests.Api\\Tests.Api.csproj|solutionrelative:tests.api\\globalusings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{46600120-C9F5-4B00-93EB-4F0AC53AB836}|Tests.Api\\Tests.Api.csproj|c:\\users\\marti\\code\\openpay\\v1\\backend\\tests.api\\itemcontroller\\editasync.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{46600120-C9F5-4B00-93EB-4F0AC53AB836}|Tests.Api\\Tests.Api.csproj|solutionrelative:tests.api\\itemcontroller\\editasync.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BCABCAD0-706F-4ED0-894C-7BC28E04B526}|Startup\\Startup.csproj|c:\\users\\marti\\code\\openpay\\v1\\backend\\startup\\startup.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{BCABCAD0-706F-4ED0-894C-7BC28E04B526}|Startup\\Startup.csproj|solutionrelative:startup\\startup.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+      "AbsoluteMoniker": "D:0:0:{46600120-C9F5-4B00-93EB-4F0AC53AB836}|Tests.Api\\Tests.Api.csproj|c:\\users\\marti\\code\\openpay\\v1\\backend\\tests.api\\itemcontroller\\deleteasync.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{46600120-C9F5-4B00-93EB-4F0AC53AB836}|Tests.Api\\Tests.Api.csproj|solutionrelative:tests.api\\itemcontroller\\deleteasync.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -130,336 +70,50 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 13,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "ItemDataDTO.cs",
-              "DocumentMoniker": "C:\\Users\\marti\\Code\\OpenPay\\V1\\Backend\\Interfaces.Data\\DataModels\\ItemDataDTO.cs",
-              "RelativeDocumentMoniker": "Interfaces.Data\\DataModels\\ItemDataDTO.cs",
-              "ToolTip": "C:\\Users\\marti\\Code\\OpenPay\\V1\\Backend\\Interfaces.Data\\DataModels\\ItemDataDTO.cs",
-              "RelativeToolTip": "Interfaces.Data\\DataModels\\ItemDataDTO.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAABAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-17T18:06:19.965Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "DeleteAsync.cs",
-              "DocumentMoniker": "C:\\Users\\marti\\Code\\OpenPay\\V1\\Backend\\Tests.Services\\ItemServiceTests\\DeleteAsync.cs",
-              "RelativeDocumentMoniker": "Tests.Services\\ItemServiceTests\\DeleteAsync.cs",
-              "ToolTip": "C:\\Users\\marti\\Code\\OpenPay\\V1\\Backend\\Tests.Services\\ItemServiceTests\\DeleteAsync.cs",
-              "RelativeToolTip": "Tests.Services\\ItemServiceTests\\DeleteAsync.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-17T18:02:50.332Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "EditAsync.cs",
-              "DocumentMoniker": "C:\\Users\\marti\\Code\\OpenPay\\V1\\Backend\\Tests.Services\\ItemServiceTests\\EditAsync.cs",
-              "RelativeDocumentMoniker": "Tests.Services\\ItemServiceTests\\EditAsync.cs",
-              "ToolTip": "C:\\Users\\marti\\Code\\OpenPay\\V1\\Backend\\Tests.Services\\ItemServiceTests\\EditAsync.cs",
-              "RelativeToolTip": "Tests.Services\\ItemServiceTests\\EditAsync.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-17T18:02:36.032Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "CreateAsync.cs",
-              "DocumentMoniker": "C:\\Users\\marti\\Code\\OpenPay\\V1\\Backend\\Tests.Services\\ItemServiceTests\\CreateAsync.cs",
-              "RelativeDocumentMoniker": "Tests.Services\\ItemServiceTests\\CreateAsync.cs",
-              "ToolTip": "C:\\Users\\marti\\Code\\OpenPay\\V1\\Backend\\Tests.Services\\ItemServiceTests\\CreateAsync.cs",
-              "RelativeToolTip": "Tests.Services\\ItemServiceTests\\CreateAsync.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-17T18:02:28.366Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "GetByIdAsync.cs",
-              "DocumentMoniker": "C:\\Users\\marti\\Code\\OpenPay\\V1\\Backend\\Tests.Services\\ItemServiceTests\\GetByIdAsync.cs",
-              "RelativeDocumentMoniker": "Tests.Services\\ItemServiceTests\\GetByIdAsync.cs",
-              "ToolTip": "C:\\Users\\marti\\Code\\OpenPay\\V1\\Backend\\Tests.Services\\ItemServiceTests\\GetByIdAsync.cs",
-              "RelativeToolTip": "Tests.Services\\ItemServiceTests\\GetByIdAsync.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-17T18:02:12.92Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 2,
               "Title": "GetAllAsync.cs",
               "DocumentMoniker": "C:\\Users\\marti\\Code\\OpenPay\\V1\\Backend\\Tests.Services\\ItemServiceTests\\GetAllAsync.cs",
               "RelativeDocumentMoniker": "Tests.Services\\ItemServiceTests\\GetAllAsync.cs",
               "ToolTip": "C:\\Users\\marti\\Code\\OpenPay\\V1\\Backend\\Tests.Services\\ItemServiceTests\\GetAllAsync.cs",
               "RelativeToolTip": "Tests.Services\\ItemServiceTests\\GetAllAsync.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "ViewState": "AQIAABkAAAAAAAAAAAAgwCMAAAAKAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-17T18:02:05.879Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "IUnitOfWork.cs",
-              "DocumentMoniker": "C:\\Users\\marti\\Code\\OpenPay\\V1\\Backend\\Interfaces.Data\\Models\\IUnitOfWork.cs",
-              "RelativeDocumentMoniker": "Interfaces.Data\\Models\\IUnitOfWork.cs",
-              "ToolTip": "C:\\Users\\marti\\Code\\OpenPay\\V1\\Backend\\Interfaces.Data\\Models\\IUnitOfWork.cs",
-              "RelativeToolTip": "Interfaces.Data\\Models\\IUnitOfWork.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-17T17:58:47.33Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "IItemRepository.cs",
-              "DocumentMoniker": "C:\\Users\\marti\\Code\\OpenPay\\V1\\Backend\\Interfaces.Data\\Repositories\\IItemRepository.cs",
-              "RelativeDocumentMoniker": "Interfaces.Data\\Repositories\\IItemRepository.cs",
-              "ToolTip": "C:\\Users\\marti\\Code\\OpenPay\\V1\\Backend\\Interfaces.Data\\Repositories\\IItemRepository.cs",
-              "RelativeToolTip": "Interfaces.Data\\Repositories\\IItemRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-17T17:54:24.997Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "ItemService.cs",
-              "DocumentMoniker": "C:\\Users\\marti\\Code\\OpenPay\\V1\\Backend\\Services\\ItemService.cs",
-              "RelativeDocumentMoniker": "Services\\ItemService.cs",
-              "ToolTip": "C:\\Users\\marti\\Code\\OpenPay\\V1\\Backend\\Services\\ItemService.cs",
-              "RelativeToolTip": "Services\\ItemService.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAABcAAAAIAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-17T17:51:14.235Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "Dockerfile",
-              "DocumentMoniker": "C:\\Users\\marti\\Code\\OpenPay\\V1\\Backend\\Startup\\Dockerfile",
-              "RelativeDocumentMoniker": "Startup\\Dockerfile",
-              "ToolTip": "C:\\Users\\marti\\Code\\OpenPay\\V1\\Backend\\Startup\\Dockerfile",
-              "RelativeToolTip": "Startup\\Dockerfile",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-02-17T17:46:20.248Z",
+              "WhenOpened": "2025-02-17T21:44:35.356Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "ItemsController.cs",
-              "DocumentMoniker": "C:\\Users\\marti\\Code\\OpenPay\\V1\\Backend\\Api\\Controllers\\ItemsController.cs",
-              "RelativeDocumentMoniker": "Api\\Controllers\\ItemsController.cs",
-              "ToolTip": "C:\\Users\\marti\\Code\\OpenPay\\V1\\Backend\\Api\\Controllers\\ItemsController.cs",
-              "RelativeToolTip": "Api\\Controllers\\ItemsController.cs",
-              "ViewState": "AQIAADEAAAAAAAAAAAAwwEMAAAAtAAAA",
+              "Title": "GetByIdAsync.cs",
+              "DocumentMoniker": "C:\\Users\\marti\\Code\\OpenPay\\V1\\Backend\\Tests.Services\\ItemServiceTests\\GetByIdAsync.cs",
+              "RelativeDocumentMoniker": "Tests.Services\\ItemServiceTests\\GetByIdAsync.cs",
+              "ToolTip": "C:\\Users\\marti\\Code\\OpenPay\\V1\\Backend\\Tests.Services\\ItemServiceTests\\GetByIdAsync.cs",
+              "RelativeToolTip": "Tests.Services\\ItemServiceTests\\GetByIdAsync.cs",
+              "ViewState": "AQIAAAcAAAAAAAAAAAAtwBIAAAANAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-17T10:58:29.883Z",
+              "WhenOpened": "2025-02-17T21:20:04.763Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "launchSettings.json",
-              "DocumentMoniker": "C:\\Users\\marti\\Code\\OpenPay\\V1\\Backend\\Startup\\Properties\\launchSettings.json",
-              "RelativeDocumentMoniker": "Startup\\Properties\\launchSettings.json",
-              "ToolTip": "C:\\Users\\marti\\Code\\OpenPay\\V1\\Backend\\Startup\\Properties\\launchSettings.json",
-              "RelativeToolTip": "Startup\\Properties\\launchSettings.json",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAACAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-02-16T22:56:37.344Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 7,
               "Title": "CreateAsync.cs",
               "DocumentMoniker": "C:\\Users\\marti\\Code\\OpenPay\\V1\\Backend\\Tests.Api\\ItemController\\CreateAsync.cs",
               "RelativeDocumentMoniker": "Tests.Api\\ItemController\\CreateAsync.cs",
               "ToolTip": "C:\\Users\\marti\\Code\\OpenPay\\V1\\Backend\\Tests.Api\\ItemController\\CreateAsync.cs",
               "RelativeToolTip": "Tests.Api\\ItemController\\CreateAsync.cs",
-              "ViewState": "AQIAAC0AAAAAAAAAAAAowFQAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAHMAAAAOAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-17T12:58:43.216Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Optional.cs",
-              "DocumentMoniker": "C:\\Users\\marti\\Code\\OpenPay\\V1\\Backend\\Interfaces.Common\\Models\\Optional.cs",
-              "RelativeDocumentMoniker": "Interfaces.Common\\Models\\Optional.cs",
-              "ToolTip": "C:\\Users\\marti\\Code\\OpenPay\\V1\\Backend\\Interfaces.Common\\Models\\Optional.cs",
-              "RelativeToolTip": "Interfaces.Common\\Models\\Optional.cs",
-              "ViewState": "AQIAABMAAAAAAAAAAAD4vzMAAAAuAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-17T14:17:23.998Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "EditAsync.cs",
-              "DocumentMoniker": "C:\\Users\\marti\\Code\\OpenPay\\V1\\Backend\\Tests.Api\\ItemController\\EditAsync.cs",
-              "RelativeDocumentMoniker": "Tests.Api\\ItemController\\EditAsync.cs",
-              "ToolTip": "C:\\Users\\marti\\Code\\OpenPay\\V1\\Backend\\Tests.Api\\ItemController\\EditAsync.cs",
-              "RelativeToolTip": "Tests.Api\\ItemController\\EditAsync.cs",
-              "ViewState": "AQIAAEUAAAAAAAAAAAAjwFQAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-17T12:58:51.466Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "GetByIdAsync.cs",
-              "DocumentMoniker": "C:\\Users\\marti\\Code\\OpenPay\\V1\\Backend\\Tests.Api\\ItemController\\GetByIdAsync.cs",
-              "RelativeDocumentMoniker": "Tests.Api\\ItemController\\GetByIdAsync.cs",
-              "ToolTip": "C:\\Users\\marti\\Code\\OpenPay\\V1\\Backend\\Tests.Api\\ItemController\\GetByIdAsync.cs",
-              "RelativeToolTip": "Tests.Api\\ItemController\\GetByIdAsync.cs",
-              "ViewState": "AQIAACgAAAAAAAAAAAAIwDkAAAAcAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-17T11:38:02.688Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 14,
-              "Title": "IItemService.cs",
-              "DocumentMoniker": "C:\\Users\\marti\\Code\\OpenPay\\V1\\Backend\\Interfaces.Services\\IItemService.cs",
-              "RelativeDocumentMoniker": "Interfaces.Services\\IItemService.cs",
-              "ToolTip": "C:\\Users\\marti\\Code\\OpenPay\\V1\\Backend\\Interfaces.Services\\IItemService.cs",
-              "RelativeToolTip": "Interfaces.Services\\IItemService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-17T17:54:45.529Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "NotFoundException.cs",
-              "DocumentMoniker": "C:\\Users\\marti\\Code\\OpenPay\\V1\\Backend\\Interfaces.Common\\Exceptions\\NotFoundException.cs",
-              "RelativeDocumentMoniker": "Interfaces.Common\\Exceptions\\NotFoundException.cs",
-              "ToolTip": "C:\\Users\\marti\\Code\\OpenPay\\V1\\Backend\\Interfaces.Common\\Exceptions\\NotFoundException.cs",
-              "RelativeToolTip": "Interfaces.Common\\Exceptions\\NotFoundException.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAABAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-17T16:10:52.069Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "ItemResponse.cs",
-              "DocumentMoniker": "C:\\Users\\marti\\Code\\OpenPay\\V1\\Backend\\Api\\Models\\Response\\ItemResponse.cs",
-              "RelativeDocumentMoniker": "Api\\Models\\Response\\ItemResponse.cs",
-              "ToolTip": "C:\\Users\\marti\\Code\\OpenPay\\V1\\Backend\\Api\\Models\\Response\\ItemResponse.cs",
-              "RelativeToolTip": "Api\\Models\\Response\\ItemResponse.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAqwAsAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-17T14:14:05.056Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 24,
-              "Title": "None.cs",
-              "DocumentMoniker": "C:\\Users\\marti\\Code\\OpenPay\\V1\\Backend\\Interfaces.Common\\Models\\None.cs",
-              "RelativeDocumentMoniker": "Interfaces.Common\\Models\\None.cs",
-              "ToolTip": "C:\\Users\\marti\\Code\\OpenPay\\V1\\Backend\\Interfaces.Common\\Models\\None.cs",
-              "RelativeToolTip": "Interfaces.Common\\Models\\None.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-17T14:39:54.321Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "ValidPrice.cs",
-              "DocumentMoniker": "C:\\Users\\marti\\Code\\OpenPay\\V1\\Backend\\Api\\Models\\Annotations\\ValidPrice.cs",
-              "RelativeDocumentMoniker": "Api\\Models\\Annotations\\ValidPrice.cs",
-              "ToolTip": "C:\\Users\\marti\\Code\\OpenPay\\V1\\Backend\\Api\\Models\\Annotations\\ValidPrice.cs",
-              "RelativeToolTip": "Api\\Models\\Annotations\\ValidPrice.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAZAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-17T13:44:55.296Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 26,
-              "Title": "ModelValidationHelper.cs",
-              "DocumentMoniker": "C:\\Users\\marti\\Code\\OpenPay\\V1\\Backend\\Tests.Api\\Helpers\\ModelValidationHelper.cs",
-              "RelativeDocumentMoniker": "Tests.Api\\Helpers\\ModelValidationHelper.cs",
-              "ToolTip": "C:\\Users\\marti\\Code\\OpenPay\\V1\\Backend\\Tests.Api\\Helpers\\ModelValidationHelper.cs",
-              "RelativeToolTip": "Tests.Api\\Helpers\\ModelValidationHelper.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAIAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-17T13:06:42.642Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\marti\\Code\\OpenPay\\V1\\Backend\\Startup\\Program.cs",
-              "RelativeDocumentMoniker": "Startup\\Program.cs",
-              "ToolTip": "C:\\Users\\marti\\Code\\OpenPay\\V1\\Backend\\Startup\\Program.cs",
-              "RelativeToolTip": "Startup\\Program.cs",
-              "ViewState": "AQIAABMAAAAAAAAAAAAjwCsAAAADAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-16T22:50:02.221Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "GetAllAsync.cs",
-              "DocumentMoniker": "C:\\Users\\marti\\Code\\OpenPay\\V1\\Backend\\Tests.Api\\ItemController\\GetAllAsync.cs",
-              "RelativeDocumentMoniker": "Tests.Api\\ItemController\\GetAllAsync.cs",
-              "ToolTip": "C:\\Users\\marti\\Code\\OpenPay\\V1\\Backend\\Tests.Api\\ItemController\\GetAllAsync.cs",
-              "RelativeToolTip": "Tests.Api\\ItemController\\GetAllAsync.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAOAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-17T10:50:17.454Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "BadRequestException.cs",
-              "DocumentMoniker": "C:\\Users\\marti\\Code\\OpenPay\\V1\\Backend\\Interfaces.Common\\Exceptions\\BadRequestException.cs",
-              "RelativeDocumentMoniker": "Interfaces.Common\\Exceptions\\BadRequestException.cs",
-              "ToolTip": "C:\\Users\\marti\\Code\\OpenPay\\V1\\Backend\\Interfaces.Common\\Exceptions\\BadRequestException.cs",
-              "RelativeToolTip": "Interfaces.Common\\Exceptions\\BadRequestException.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAABAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-17T16:30:33.707Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
               "Title": "DeleteAsync.cs",
               "DocumentMoniker": "C:\\Users\\marti\\Code\\OpenPay\\V1\\Backend\\Tests.Api\\ItemController\\DeleteAsync.cs",
               "RelativeDocumentMoniker": "Tests.Api\\ItemController\\DeleteAsync.cs",
@@ -472,54 +126,151 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "CreateItemRequest.cs",
-              "DocumentMoniker": "C:\\Users\\marti\\Code\\OpenPay\\V1\\Backend\\Api\\Models\\Request\\CreateItemRequest.cs",
-              "RelativeDocumentMoniker": "Api\\Models\\Request\\CreateItemRequest.cs",
-              "ToolTip": "C:\\Users\\marti\\Code\\OpenPay\\V1\\Backend\\Api\\Models\\Request\\CreateItemRequest.cs",
-              "RelativeToolTip": "Api\\Models\\Request\\CreateItemRequest.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAATAAAA",
+              "DocumentIndex": 13,
+              "Title": "EditAsync.cs",
+              "DocumentMoniker": "C:\\Users\\marti\\Code\\OpenPay\\V1\\Backend\\Tests.Api\\ItemController\\EditAsync.cs",
+              "RelativeDocumentMoniker": "Tests.Api\\ItemController\\EditAsync.cs",
+              "ToolTip": "C:\\Users\\marti\\Code\\OpenPay\\V1\\Backend\\Tests.Api\\ItemController\\EditAsync.cs",
+              "RelativeToolTip": "Tests.Api\\ItemController\\EditAsync.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAAFQAAAA6AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-17T13:04:31.167Z",
+              "WhenOpened": "2025-02-17T12:58:51.466Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
-              "Title": "GlobalUsings.cs",
-              "DocumentMoniker": "C:\\Users\\marti\\Code\\OpenPay\\V1\\Backend\\Tests.Api\\GlobalUsings.cs",
-              "RelativeDocumentMoniker": "Tests.Api\\GlobalUsings.cs",
-              "ToolTip": "C:\\Users\\marti\\Code\\OpenPay\\V1\\Backend\\Tests.Api\\GlobalUsings.cs",
-              "RelativeToolTip": "Tests.Api\\GlobalUsings.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAEAAAAHAAAA",
+              "DocumentIndex": 3,
+              "Title": "GetAllAsync.cs",
+              "DocumentMoniker": "C:\\Users\\marti\\Code\\OpenPay\\V1\\Backend\\Tests.Api\\ItemController\\GetAllAsync.cs",
+              "RelativeDocumentMoniker": "Tests.Api\\ItemController\\GetAllAsync.cs",
+              "ToolTip": "C:\\Users\\marti\\Code\\OpenPay\\V1\\Backend\\Tests.Api\\ItemController\\GetAllAsync.cs",
+              "RelativeToolTip": "Tests.Api\\ItemController\\GetAllAsync.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAABUAAAA3AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-17T10:50:54.683Z",
+              "WhenOpened": "2025-02-17T10:50:17.454Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
-              "Title": "RandomString.cs",
-              "DocumentMoniker": "C:\\Users\\marti\\Code\\OpenPay\\V1\\Backend\\Tests.Api\\Helpers\\RandomString.cs",
-              "RelativeDocumentMoniker": "Tests.Api\\Helpers\\RandomString.cs",
-              "ToolTip": "C:\\Users\\marti\\Code\\OpenPay\\V1\\Backend\\Tests.Api\\Helpers\\RandomString.cs",
-              "RelativeToolTip": "Tests.Api\\Helpers\\RandomString.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABcAAAABAAAA",
+              "DocumentIndex": 4,
+              "Title": "GetByIdAsync.cs",
+              "DocumentMoniker": "C:\\Users\\marti\\Code\\OpenPay\\V1\\Backend\\Tests.Api\\ItemController\\GetByIdAsync.cs",
+              "RelativeDocumentMoniker": "Tests.Api\\ItemController\\GetByIdAsync.cs",
+              "ToolTip": "C:\\Users\\marti\\Code\\OpenPay\\V1\\Backend\\Tests.Api\\ItemController\\GetByIdAsync.cs",
+              "RelativeToolTip": "Tests.Api\\ItemController\\GetByIdAsync.cs",
+              "ViewState": "AQIAAA0AAAAAAAAAAAA1wDEAAAA5AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-17T13:17:27.384Z",
+              "WhenOpened": "2025-02-17T11:38:02.688Z",
+              "EditorCaption": ""
+            }
+          ]
+        },
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 7,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "EditItemDataDTO.cs",
+              "DocumentMoniker": "C:\\Users\\marti\\Code\\OpenPay\\V1\\Backend\\Interfaces.Data\\DataModels\\EditItemDataDTO.cs",
+              "RelativeDocumentMoniker": "Interfaces.Data\\DataModels\\EditItemDataDTO.cs",
+              "ToolTip": "C:\\Users\\marti\\Code\\OpenPay\\V1\\Backend\\Interfaces.Data\\DataModels\\EditItemDataDTO.cs",
+              "RelativeToolTip": "Interfaces.Data\\DataModels\\EditItemDataDTO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAvAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-17T21:33:16.407Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
-              "Title": "Startup.csproj",
-              "DocumentMoniker": "C:\\Users\\marti\\Code\\OpenPay\\V1\\Backend\\Startup\\Startup.csproj",
-              "RelativeDocumentMoniker": "Startup\\Startup.csproj",
-              "ToolTip": "C:\\Users\\marti\\Code\\OpenPay\\V1\\Backend\\Startup\\Startup.csproj",
-              "RelativeToolTip": "Startup\\Startup.csproj",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-02-16T23:00:18.927Z",
+              "DocumentIndex": 11,
+              "Title": "ItemDataDTO.cs",
+              "DocumentMoniker": "C:\\Users\\marti\\Code\\OpenPay\\V1\\Backend\\Interfaces.Data\\DataModels\\ItemDataDTO.cs",
+              "RelativeDocumentMoniker": "Interfaces.Data\\DataModels\\ItemDataDTO.cs",
+              "ToolTip": "C:\\Users\\marti\\Code\\OpenPay\\V1\\Backend\\Interfaces.Data\\DataModels\\ItemDataDTO.cs",
+              "RelativeToolTip": "Interfaces.Data\\DataModels\\ItemDataDTO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAASAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-17T21:32:32.382Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Optional.cs",
+              "DocumentMoniker": "C:\\Users\\marti\\Code\\OpenPay\\V1\\Backend\\Interfaces.Common\\Models\\Optional.cs",
+              "RelativeDocumentMoniker": "Interfaces.Common\\Models\\Optional.cs",
+              "ToolTip": "C:\\Users\\marti\\Code\\OpenPay\\V1\\Backend\\Interfaces.Common\\Models\\Optional.cs",
+              "RelativeToolTip": "Interfaces.Common\\Models\\Optional.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABkAAAAaAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-17T21:13:43.366Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "IItemRepository.cs",
+              "DocumentMoniker": "C:\\Users\\marti\\Code\\OpenPay\\V1\\Backend\\Interfaces.Data\\Repositories\\IItemRepository.cs",
+              "RelativeDocumentMoniker": "Interfaces.Data\\Repositories\\IItemRepository.cs",
+              "ToolTip": "C:\\Users\\marti\\Code\\OpenPay\\V1\\Backend\\Interfaces.Data\\Repositories\\IItemRepository.cs",
+              "RelativeToolTip": "Interfaces.Data\\Repositories\\IItemRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAqwAkAAAAmAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-17T21:00:33.92Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ItemService.cs",
+              "DocumentMoniker": "C:\\Users\\marti\\Code\\OpenPay\\V1\\Backend\\Services\\ItemService.cs",
+              "RelativeDocumentMoniker": "Services\\ItemService.cs",
+              "ToolTip": "C:\\Users\\marti\\Code\\OpenPay\\V1\\Backend\\Services\\ItemService.cs",
+              "RelativeToolTip": "Services\\ItemService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-17T20:53:23.028Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "EditAsync.cs",
+              "DocumentMoniker": "C:\\Users\\marti\\Code\\OpenPay\\V1\\Backend\\Tests.Services\\ItemServiceTests\\EditAsync.cs",
+              "RelativeDocumentMoniker": "Tests.Services\\ItemServiceTests\\EditAsync.cs",
+              "ToolTip": "C:\\Users\\marti\\Code\\OpenPay\\V1\\Backend\\Tests.Services\\ItemServiceTests\\EditAsync.cs",
+              "RelativeToolTip": "Tests.Services\\ItemServiceTests\\EditAsync.cs",
+              "ViewState": "AQIAAEgAAAAAAAAAAAAowFgAAAAKAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-17T18:02:36.032Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "DeleteAsync.cs",
+              "DocumentMoniker": "C:\\Users\\marti\\Code\\OpenPay\\V1\\Backend\\Tests.Services\\ItemServiceTests\\DeleteAsync.cs",
+              "RelativeDocumentMoniker": "Tests.Services\\ItemServiceTests\\DeleteAsync.cs",
+              "ToolTip": "C:\\Users\\marti\\Code\\OpenPay\\V1\\Backend\\Tests.Services\\ItemServiceTests\\DeleteAsync.cs",
+              "RelativeToolTip": "Tests.Services\\ItemServiceTests\\DeleteAsync.cs",
+              "ViewState": "AQIAACIAAAAAAAAAAAAgwCwAAAAKAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-17T18:02:50.332Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "CreateAsync.cs",
+              "DocumentMoniker": "C:\\Users\\marti\\Code\\OpenPay\\V1\\Backend\\Tests.Services\\ItemServiceTests\\CreateAsync.cs",
+              "RelativeDocumentMoniker": "Tests.Services\\ItemServiceTests\\CreateAsync.cs",
+              "ToolTip": "C:\\Users\\marti\\Code\\OpenPay\\V1\\Backend\\Tests.Services\\ItemServiceTests\\CreateAsync.cs",
+              "RelativeToolTip": "Tests.Services\\ItemServiceTests\\CreateAsync.cs",
+              "ViewState": "AQIAAAEAAAAAAAAAAAAcwAwAAAAYAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-17T18:02:28.366Z",
               "EditorCaption": ""
             }
           ]

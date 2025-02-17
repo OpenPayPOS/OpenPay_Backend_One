@@ -10,6 +10,7 @@ using OpenPay.Services;
 namespace OpenPay.Tests.Services.ItemServiceTests;
 public class DeleteAsync
 {
+    [Fact]
     public async Task DeleteAsync_ReturnsSuccess_IfDeleted()
     {
         // Arrange
@@ -41,6 +42,7 @@ public class DeleteAsync
         });
     }
 
+    [Fact]
     public async Task DeleteAsync_ReturnsNotFoundException_IfIdDoesntExist()
     {
         // Arrange

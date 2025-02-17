@@ -12,6 +12,8 @@ using OpenPay.Services;
 namespace OpenPay.Tests.Services.ItemServiceTests;
 public class CreateAsync
 {
+
+    [Fact]
     public async Task CreateAsync_ReturnsItem_IfCreated()
     {
         // Arrange
@@ -49,6 +51,7 @@ public class CreateAsync
         });
     }
 
+    [Fact]
     public async Task CreateAsync_ReturnsBadRequestException_IfNameExists()
     {
         // Arrange

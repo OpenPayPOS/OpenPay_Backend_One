@@ -10,6 +10,7 @@ using OpenPay.Services;
 namespace OpenPay.Tests.Services.ItemServiceTests;
 public class EditAsync
 {
+    [Fact]
     public async Task EditAsync_ReturnsItem_IfEdited()
     {
         // Arrange
@@ -50,6 +51,7 @@ public class EditAsync
         });
     }
 
+    [Fact]
     public async Task EditAsync_ReturnsBadRequestException_IfNameExists()
     {
         // Arrange
@@ -84,6 +86,7 @@ public class EditAsync
         });
     }
 
+    [Fact]
     public async Task EditAsync_ReturnsNotFoundException_IfIdDoesntExist()
     {
         // Arrange

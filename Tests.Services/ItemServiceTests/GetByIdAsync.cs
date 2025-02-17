@@ -12,6 +12,7 @@ using OpenPay.Services;
 namespace OpenPay.Tests.Services.ItemServiceTests;
 public class GetByIdAsync
 {
+    [Fact]
     public async Task GetById_ReturnsNotFoundException_IfNotFound()
     {
         // Arrange
@@ -42,6 +43,7 @@ public class GetByIdAsync
         });
     }
 
+    [Fact]
     public async Task GetById_ReturnsItem_IfFound()
     {
         // Arrange

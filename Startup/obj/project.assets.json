@@ -1368,6 +1368,9 @@
       "Interfaces.Common/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "Microsoft.AspNetCore.Mvc.Core": "2.3.0"
+        },
         "compile": {
           "bin/placeholder/Interfaces.Common.dll": {}
         },

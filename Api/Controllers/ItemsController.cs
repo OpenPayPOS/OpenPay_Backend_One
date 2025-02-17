@@ -41,9 +41,7 @@ public class ItemsController : ControllerBase
 
         var itemOptional = await _itemService.GetByIdAsync(id);
 
-        if (itemOptional.IsInvalid) return HandleException(itemOptional);
-
-        return Ok(await MapDtoToModelAsync(itemOptional));
+        return await itemOptional.HandleAsync(MapDtoToModelAsync, HandleException);
     }
 
     [HttpPost]
@@ -53,9 +51,10 @@ public class ItemsController : ControllerBase
     {
         var itemOptional = await _itemService.CreateAsync(item.Name, item.Price, item.TaxPercentage);
 
-        if (itemOptional.IsInvalid) return HandleException(itemOptional);
-
-        return CreatedAtAction(nameof(GetByIdAsync), new { id = itemOptional.Value.Id }, await MapDtoToModelAsync(itemOptional));
+        return await itemOptional.HandleAsync(async itemDTO =>
+        {
+            return CreatedAtAction(nameof(GetByIdAsync), new { id = itemDTO.Id }, await MapDtoToModelAsync(itemDTO));
+        }, HandleException);
     }
 
     [HttpPatch]
@@ -66,9 +65,10 @@ public class ItemsController : ControllerBase
         if (item.Id == Guid.Empty) return BadRequest("Guid cannot be empty");
         var itemOptional = await _itemService.EditAsync(item.Id, item.Name, item.Price, item.TaxPercentage);
 
-        if (itemOptional.IsInvalid) return HandleException(itemOptional);
-
-        return CreatedAtAction(nameof(GetByIdAsync), new { id = itemOptional.Value.Id }, await MapDtoToModelAsync(itemOptional));
+        return await itemOptional.HandleAsync(async itemDTO =>
+        {
+            return CreatedAtAction(nameof(GetByIdAsync), new { id = itemDTO.Id }, await MapDtoToModelAsync(itemDTO));
+        }, HandleException);
     }
 
     [HttpDelete("{id}")]
@@ -79,9 +79,7 @@ public class ItemsController : ControllerBase
         if (id == Guid.Empty) return BadRequest("Guid cannot be empty");
         var optional = await _itemService.DeleteAsync(id);
 
-        if (optional.IsInvalid) return HandleException(optional);
-
-        return NoContent();
+        return optional.Handle(_ => NoContent(), HandleException);
     }
 
     private static Task<ItemResponse> MapDtoToModelAsync(ItemDTO item)

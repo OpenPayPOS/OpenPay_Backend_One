@@ -1,13 +1,10 @@
-﻿namespace Interfaces.Common.Models;
+﻿using Microsoft.AspNetCore.Mvc;
+
+namespace Interfaces.Common.Models;
 public class Optional<T>
 {
     public bool IsValid { get => _exception == null; }
     public bool IsInvalid { get => !IsValid; }
-
-#pragma warning disable CS8603 // Possible null reference return.
-    public T Value { get => _value; }
-    public Exception Exception { get => _exception; }
-#pragma warning restore CS8603 // Possible null reference return.
 
     private readonly T? _value;
     private readonly Exception? _exception;
@@ -25,12 +22,53 @@ public class Optional<T>
     }
 
 #pragma warning disable CS8603 // Possible null reference return.
-    public static implicit operator T(Optional<T> optional) => optional._value;
-    public static implicit operator Exception(Optional<T> optional) => optional._exception;
-
     public static implicit operator Optional<T>(T input) => new(input);
     public static implicit operator Optional<T>(Exception ex) => new(ex);
 #pragma warning restore CS8603 // Possible null reference return.
+
+#pragma warning disable CS8604 // Possible null reference argument.
+    public ActionResult Handle(Func<T, ActionResult> success, Func<Exception, ActionResult> fail)
+    {
+        if (IsValid)
+        {
+            return success(_value);
+        }
+        else
+        {
+            return fail(_exception);
+        }
+    }
+
+    public async Task<ActionResult> HandleAsync<TOut>(Func<T, Task<TOut>> success, Func<Exception, ActionResult> fail)
+    {
+        if (IsValid)
+        {
+            var result = await success(_value);
+            if (result is ActionResult actionResult)
+            {
+                return actionResult;
+            }
+
+            return new OkObjectResult(result);
+        }
+        else
+        {
+            return fail(_exception);
+        }
+    }
+
+    public async Task<ActionResult> HandleAsync(Func<T, Task<ActionResult>> success, Func<Exception, Task<ActionResult>> fail)
+    {
+        if (IsValid)
+        {
+            return await success(_value);
+        }
+        else
+        {
+            return await fail(_exception);
+        }
+    }
+#pragma warning restore CS8604 // Possible null reference argument.
 }
 
 public class Optional : Optional<None>

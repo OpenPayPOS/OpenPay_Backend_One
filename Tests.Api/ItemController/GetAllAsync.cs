@@ -40,7 +40,6 @@ public class GetAllAsync
         _service.GetAllAsync().Returns(new List<ItemDTO> { new ItemDTO { Id = Guid.NewGuid(), Name = "test", Price = 10, TaxPercentage = 10 } }.ToAsyncEnumerable());
 
         List<ItemResponse> items = [];
-        // TODO: Add data return in service mock
 
         // Act
         await foreach (var item in itemsController.GetAllAsync())

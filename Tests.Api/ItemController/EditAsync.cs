@@ -23,7 +23,6 @@ public class EditAsync
         Guid id = Guid.NewGuid();
         string name = RandomString.Random(nameLength);
         var model = new EditItemRequest { Id = id, Name = name };
-        // TODO: add data in mock
 
         // Act
         var validationResults = ModelValidationHelper.ValidateModel(model);
@@ -45,7 +44,6 @@ public class EditAsync
         // Arrange
         Guid id = Guid.NewGuid();
         var model = new EditItemRequest { Id = id, Price = price};
-        // TODO: add data in mock
 
         // Act
         var validationResults = ModelValidationHelper.ValidateModel(model);
@@ -70,7 +68,6 @@ public class EditAsync
         // Arrange
         Guid id = Guid.NewGuid();
         var model = new EditItemRequest { Id = id, TaxPercentage = percentage };
-        // TODO: add data in mock
 
         // Act
         var validationResults = ModelValidationHelper.ValidateModel(model);
@@ -133,8 +130,6 @@ public class EditAsync
         var model = new EditItemRequest { Id = id, Name = name };
 
         _service.EditAsync(id, name, null, null).Returns(Task.FromResult(new Optional<ItemDTO>(new BadRequestException("That name already exists"))));
-
-        // TODO: Add data in service mock
 
         // Act
         var result = await itemsController.EditAsync(model);

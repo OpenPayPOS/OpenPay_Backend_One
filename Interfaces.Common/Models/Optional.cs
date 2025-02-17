@@ -23,6 +23,14 @@ public class Optional<T>
         _exception = exception;
         _value = default;
     }
+
+#pragma warning disable CS8603 // Possible null reference return.
+    public static implicit operator T(Optional<T> optional) => optional._value;
+    public static implicit operator Exception(Optional<T> optional) => optional._exception;
+
+    public static implicit operator Optional<T>(T input) => new(input);
+    public static implicit operator Optional<T>(Exception ex) => new(ex);
+#pragma warning restore CS8603 // Possible null reference return.
 }
 
 public class Optional : Optional<None>

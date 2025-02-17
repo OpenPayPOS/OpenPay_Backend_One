@@ -19,7 +19,7 @@ public class CreateItemRequest
     public decimal Price { get; set; }
 
     [Required(ErrorMessage = "Tax percentage is required.")]
-    [ValidPrice(ErrorMessage = "Percentage has to have at most 2 decimals.")]
     [Range(0, 100, ErrorMessage = "Tax percentage must be between 0 and 100.")]
+    [ValidPrice(ErrorMessage = "Percentage has to have at most 2 decimals.")]
     public decimal TaxPercentage { get; set; }
 }

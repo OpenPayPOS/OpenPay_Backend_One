@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\marti\\Code\\OpenPay\\V1\\Backend\\Api\\Api.csproj": {}
+    "C:\\Users\\marti\\Code\\OpenPay\\V1\\Backend\\Interfaces.Tests\\Interfaces.Tests.csproj": {}
   },
   "projects": {
-    "C:\\Users\\marti\\Code\\OpenPay\\V1\\Backend\\Api\\Api.csproj": {
+    "C:\\Users\\marti\\Code\\OpenPay\\V1\\Backend\\Interfaces.Tests\\Interfaces.Tests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\marti\\Code\\OpenPay\\V1\\Backend\\Api\\Api.csproj",
-        "projectName": "Api",
-        "projectPath": "C:\\Users\\marti\\Code\\OpenPay\\V1\\Backend\\Api\\Api.csproj",
+        "projectUniqueName": "C:\\Users\\marti\\Code\\OpenPay\\V1\\Backend\\Interfaces.Tests\\Interfaces.Tests.csproj",
+        "projectName": "OpenPay.Interfaces.Tests",
+        "projectPath": "C:\\Users\\marti\\Code\\OpenPay\\V1\\Backend\\Interfaces.Tests\\Interfaces.Tests.csproj",
         "packagesPath": "C:\\Users\\marti\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\marti\\Code\\OpenPay\\V1\\Backend\\Api\\obj\\",
+        "outputPath": "C:\\Users\\marti\\Code\\OpenPay\\V1\\Backend\\Interfaces.Tests\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\marti\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -44,16 +44,6 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
-          "dependencies": {
-            "Microsoft.AspNetCore.Mvc.Core": {
-              "target": "Package",
-              "version": "[2.3.0, )"
-            },
-            "Microsoft.AspNetCore.OpenApi": {
-              "target": "Package",
-              "version": "[8.0.13, )"
-            }
-          },
           "imports": [
             "net461",
             "net462",

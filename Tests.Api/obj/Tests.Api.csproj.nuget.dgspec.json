@@ -1,7 +1,7 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\marti\\Code\\OpenPay\\V1\\Backend\\Startup\\Startup.csproj": {}
+    "C:\\Users\\marti\\Code\\OpenPay\\V1\\Backend\\Tests.Api\\Tests.Api.csproj": {}
   },
   "projects": {
     "C:\\Users\\marti\\Code\\OpenPay\\V1\\Backend\\Api\\Api.csproj": {
@@ -74,14 +74,14 @@
         }
       }
     },
-    "C:\\Users\\marti\\Code\\OpenPay\\V1\\Backend\\Startup\\Startup.csproj": {
+    "C:\\Users\\marti\\Code\\OpenPay\\V1\\Backend\\Tests.Api\\Tests.Api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\marti\\Code\\OpenPay\\V1\\Backend\\Startup\\Startup.csproj",
-        "projectName": "OpenPay.Startup",
-        "projectPath": "C:\\Users\\marti\\Code\\OpenPay\\V1\\Backend\\Startup\\Startup.csproj",
+        "projectUniqueName": "C:\\Users\\marti\\Code\\OpenPay\\V1\\Backend\\Tests.Api\\Tests.Api.csproj",
+        "projectName": "OpenPay.Tests.Api",
+        "projectPath": "C:\\Users\\marti\\Code\\OpenPay\\V1\\Backend\\Tests.Api\\Tests.Api.csproj",
         "packagesPath": "C:\\Users\\marti\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\marti\\Code\\OpenPay\\V1\\Backend\\Startup\\obj\\",
+        "outputPath": "C:\\Users\\marti\\Code\\OpenPay\\V1\\Backend\\Tests.Api\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\marti\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -119,9 +119,25 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
-            "Swashbuckle.AspNetCore": {
+            "Microsoft.NET.Test.Sdk": {
               "target": "Package",
-              "version": "[7.2.0, )"
+              "version": "[17.8.0, )"
+            },
+            "NaughtyStrings": {
+              "target": "Package",
+              "version": "[2.4.1, )"
+            },
+            "coverlet.collector": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
+            "xunit": {
+              "target": "Package",
+              "version": "[2.5.3, )"
+            },
+            "xunit.runner.visualstudio": {
+              "target": "Package",
+              "version": "[2.5.3, )"
             }
           },
           "imports": [
@@ -136,9 +152,6 @@
           "assetTargetFallback": true,
           "warn": true,
           "frameworkReferences": {
-            "Microsoft.AspNetCore.App": {
-              "privateAssets": "none"
-            },
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }

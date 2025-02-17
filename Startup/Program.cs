@@ -38,3 +38,8 @@ app.UseHttpsRedirection();
 app.MapControllers();
 
 app.Run();
+
+// INFO: Task list legend:
+// INFO: TODO
+// INFO: HACK
+// INFO: UNDONE

@@ -1,4 +1,9 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Interfaces.Common.Exceptions;
+using Interfaces.Common.Models;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
+using NSubstitute;
+using OpenPay.Interfaces.Services;
 
 namespace OpenPay.Tests.Api.ItemController;
 public class DeleteAsync
@@ -8,13 +13,16 @@ public class DeleteAsync
     {
         // Arrange
         Guid id = Guid.Empty;
-        ItemsController itemsController = new ItemsController();
+        IItemService _service = Substitute.For<IItemService>();
+        ILogger<ItemsController> _logger = Substitute.For<ILogger<ItemsController>>();
+        ItemsController itemsController = new ItemsController(_service, _logger);
 
         // Act
         var response = await itemsController.DeleteAsync(id);
 
         // Assert
         Assert.IsType<BadRequestObjectResult>(response);
+        await _service.DidNotReceive().DeleteAsync(Arg.Any<Guid>());
     }
 
     [Fact]
@@ -22,12 +30,17 @@ public class DeleteAsync
     {
         // Arrange
         Guid id = Guid.NewGuid();
-        ItemsController itemsController = new ItemsController();
+        IItemService _service = Substitute.For<IItemService>();
+        ILogger<ItemsController> _logger = Substitute.For<ILogger<ItemsController>>();
+        ItemsController itemsController = new ItemsController(_service, _logger);
+
+        _service.DeleteAsync(id).Returns(Task.FromResult(new Optional(new NotFoundException("That id could not get found."))));
 
         // Act
         var response = await itemsController.DeleteAsync(id);
 
         // Assert
+        await _service.Received().DeleteAsync(Arg.Any<Guid>());
         Assert.IsType<NotFoundObjectResult>(response);
     }
 
@@ -36,14 +49,17 @@ public class DeleteAsync
     {
         // Arrange
         Guid id = Guid.NewGuid();
-        ItemsController itemsController = new ItemsController();
-        // TODO: add data to mock
+        IItemService _service = Substitute.For<IItemService>();
+        ILogger<ItemsController> _logger = Substitute.For<ILogger<ItemsController>>();
+        ItemsController itemsController = new ItemsController(_service, _logger);
+
+        _service.DeleteAsync(id).Returns(Task.FromResult(new Optional()));
 
         // Act
         var response = await itemsController.DeleteAsync(id);
 
         // Assert
         Assert.IsType<NoContentResult>(response);
-        // TODO: assert mock ran once
+        await _service.Received().DeleteAsync(Arg.Any<Guid>());
     }
 }

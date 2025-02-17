@@ -1265,6 +1265,29 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XDocument.dll": {}
         }
+      },
+      "Interfaces.Common/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/Interfaces.Common.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Interfaces.Common.dll": {}
+        }
+      },
+      "OpenPay.Interfaces.Services/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "Interfaces.Common": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/OpenPay.Interfaces.Services.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/OpenPay.Interfaces.Services.dll": {}
+        }
       }
     }
   },
@@ -4216,12 +4239,23 @@
         "system.xml.xdocument.4.0.11.nupkg.sha512",
         "system.xml.xdocument.nuspec"
       ]
+    },
+    "Interfaces.Common/1.0.0": {
+      "type": "project",
+      "path": "../Interfaces.Common/Interfaces.Common.csproj",
+      "msbuildProject": "../Interfaces.Common/Interfaces.Common.csproj"
+    },
+    "OpenPay.Interfaces.Services/1.0.0": {
+      "type": "project",
+      "path": "../Interfaces.Services/Interfaces.Services.csproj",
+      "msbuildProject": "../Interfaces.Services/Interfaces.Services.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net8.0": [
       "Microsoft.AspNetCore.Mvc.Core >= 2.3.0",
-      "Microsoft.AspNetCore.OpenApi >= 8.0.13"
+      "Microsoft.AspNetCore.OpenApi >= 8.0.13",
+      "OpenPay.Interfaces.Services >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -4250,7 +4284,11 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\marti\\Code\\OpenPay\\V1\\Backend\\Interfaces.Services\\Interfaces.Services.csproj": {
+              "projectPath": "C:\\Users\\marti\\Code\\OpenPay\\V1\\Backend\\Interfaces.Services\\Interfaces.Services.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

@@ -1348,13 +1348,37 @@
         "framework": ".NETCoreApp,Version=v8.0",
         "dependencies": {
           "Microsoft.AspNetCore.Mvc.Core": "2.3.0",
-          "Microsoft.AspNetCore.OpenApi": "8.0.13"
+          "Microsoft.AspNetCore.OpenApi": "8.0.13",
+          "OpenPay.Interfaces.Services": "1.0.0"
         },
         "compile": {
           "bin/placeholder/Api.dll": {}
         },
         "runtime": {
           "bin/placeholder/Api.dll": {}
+        }
+      },
+      "Interfaces.Common/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/Interfaces.Common.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Interfaces.Common.dll": {}
+        }
+      },
+      "OpenPay.Interfaces.Services/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "Interfaces.Common": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/OpenPay.Interfaces.Services.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/OpenPay.Interfaces.Services.dll": {}
         }
       }
     }
@@ -4630,6 +4654,16 @@
       "type": "project",
       "path": "../Api/Api.csproj",
       "msbuildProject": "../Api/Api.csproj"
+    },
+    "Interfaces.Common/1.0.0": {
+      "type": "project",
+      "path": "../Interfaces.Common/Interfaces.Common.csproj",
+      "msbuildProject": "../Interfaces.Common/Interfaces.Common.csproj"
+    },
+    "OpenPay.Interfaces.Services/1.0.0": {
+      "type": "project",
+      "path": "../Interfaces.Services/Interfaces.Services.csproj",
+      "msbuildProject": "../Interfaces.Services/Interfaces.Services.csproj"
     }
   },
   "projectFileDependencyGroups": {

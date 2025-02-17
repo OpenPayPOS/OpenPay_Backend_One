@@ -5,10 +5,13 @@
 *.exe
 *.pdb
 *.bin
+*.testlog
+testlog.manifest
 
 .dtbcache.v2
 .futdcache.v2
 
 Debug/
 Release/
+TestStore/
 appsettings.json

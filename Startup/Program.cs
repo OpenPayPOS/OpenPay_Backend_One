@@ -1,12 +1,17 @@
 using Microsoft.OpenApi.Models;
 using OpenPay.Api.Configuration;
 using OpenPay.Services.Configuration;
+using OpenPay.Data.Configuration;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddControllers()
+builder.Services.AddControllers(options =>
+{
+    options.SuppressAsyncSuffixInActionNames = false;
+})
     .AddApplicationPart(typeof(IWebAssemblyLoader).Assembly);
 
+builder.Services.AddDataServices(builder.Configuration);
 builder.Services.AddApplicationServices();
 
 builder.Services.AddEndpointsApiExplorer();

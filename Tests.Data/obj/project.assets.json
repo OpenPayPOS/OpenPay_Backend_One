@@ -2560,7 +2560,10 @@
         },
         "runtime": {
           "bin/placeholder/OpenPay.Data.dll": {}
-        }
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
       },
       "OpenPay.Interfaces.Data/1.0.0": {
         "type": "project",

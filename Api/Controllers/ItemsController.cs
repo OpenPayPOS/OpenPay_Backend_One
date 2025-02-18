@@ -95,14 +95,11 @@ public class ItemsController : ControllerBase
 
     private ActionResult HandleException(Exception exception)
     {
-        switch (exception.GetType().Name)
+        return exception.GetType().Name switch
         {
-            case "NotFoundException":
-                return NotFound(exception.Message);
-            case "BadRequestException":
-                return BadRequest(exception.Message);
-            default:
-                return StatusCode(StatusCodes.Status500InternalServerError);
-        }
+            "NotFoundException" => NotFound(exception.Message),
+            "BadRequestException" => BadRequest(exception.Message),
+            _ => StatusCode(StatusCodes.Status500InternalServerError),
+        };
     }
 }

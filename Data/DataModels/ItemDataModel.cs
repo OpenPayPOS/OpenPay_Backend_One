@@ -5,8 +5,8 @@ public class ItemDataModel
 {
     public Guid Id { get; set; }
     public string Name { get; set; }
-    [Precision(2)]
+    [Precision(16,2)]
     public decimal Price { get; set; }
-    [Precision(2)]
+    [Precision(5,2)]
     public decimal TaxPercentage { get; set; }
 }

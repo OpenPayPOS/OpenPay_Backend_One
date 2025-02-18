@@ -16,7 +16,7 @@ public class Transaction : ITransaction
         await _transaction.CommitAsync(cancellationToken);
     }
 
-    public async Task RollBackAsync(CancellationToken cancellationToken = default)
+    public async Task RollbackAsync(CancellationToken cancellationToken = default)
     {
         await _transaction.RollbackAsync(cancellationToken);
     }

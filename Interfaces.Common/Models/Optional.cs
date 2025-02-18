@@ -130,4 +130,6 @@ public class Optional : Optional<None>
     public Optional() : base(new None()) { }
 
     public Optional(Exception exception) : base(exception) { }
+
+    public static implicit operator Optional(Exception ex) => new(ex);
 }

@@ -1,10 +1,13 @@
 using Microsoft.OpenApi.Models;
 using OpenPay.Api.Configuration;
+using OpenPay.Services.Configuration;
 
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers()
     .AddApplicationPart(typeof(IWebAssemblyLoader).Assembly);
+
+builder.Services.AddApplicationServices();
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(c =>

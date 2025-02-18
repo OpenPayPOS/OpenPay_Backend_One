@@ -3,5 +3,7 @@ namespace OpenPay.Interfaces.Data.Models;
 
 public interface IUnitOfWork
 {
-    Task SaveChangesAsync();
+    public int SaveChanges();
+    Task<int> SaveChangesAsync();
+    Task<ITransaction> BeginTransactionAsync(CancellationToken cancellationToken = default);
 }

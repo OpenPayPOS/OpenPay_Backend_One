@@ -129,7 +129,7 @@ public class ItemRepository : IItemRepository
         }
     }
 
-    private ItemDataDTO MapToDataDTO(ItemDataModel itemDataModel)
+    private static ItemDataDTO MapToDataDTO(ItemDataModel itemDataModel)
     {
         return new ItemDataDTO
         {

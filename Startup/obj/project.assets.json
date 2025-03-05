@@ -1484,21 +1484,6 @@
           "lib/netcoreapp2.1/_._": {}
         }
       },
-      "Api/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v8.0",
-        "dependencies": {
-          "Microsoft.AspNetCore.Mvc.Core": "2.3.0",
-          "Microsoft.AspNetCore.OpenApi": "8.0.13",
-          "OpenPay.Interfaces.Services": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/Api.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/Api.dll": {}
-        }
-      },
       "Interfaces.Common/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
@@ -1510,6 +1495,21 @@
         },
         "runtime": {
           "bin/placeholder/Interfaces.Common.dll": {}
+        }
+      },
+      "OpenPay.Api/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "Microsoft.AspNetCore.Mvc.Core": "2.3.0",
+          "Microsoft.AspNetCore.OpenApi": "8.0.13",
+          "OpenPay.Interfaces.Services": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/OpenPay.Api.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/OpenPay.Api.dll": {}
         }
       },
       "OpenPay.Data/1.0.0": {
@@ -4296,15 +4296,15 @@
         "system.threading.tasks.extensions.nuspec"
       ]
     },
-    "Api/1.0.0": {
-      "type": "project",
-      "path": "../Api/Api.csproj",
-      "msbuildProject": "../Api/Api.csproj"
-    },
     "Interfaces.Common/1.0.0": {
       "type": "project",
       "path": "../Interfaces.Common/Interfaces.Common.csproj",
       "msbuildProject": "../Interfaces.Common/Interfaces.Common.csproj"
+    },
+    "OpenPay.Api/1.0.0": {
+      "type": "project",
+      "path": "../Api/Api.csproj",
+      "msbuildProject": "../Api/Api.csproj"
     },
     "OpenPay.Data/1.0.0": {
       "type": "project",
@@ -4329,10 +4329,10 @@
   },
   "projectFileDependencyGroups": {
     "net8.0": [
-      "Api >= 1.0.0",
       "Microsoft.EntityFrameworkCore >= 9.0.2",
       "Microsoft.EntityFrameworkCore.Design >= 9.0.2",
       "Microsoft.VisualStudio.Azure.Containers.Tools.Targets >= 1.19.6",
+      "OpenPay.Api >= 1.0.0",
       "OpenPay.Data >= 1.0.0",
       "OpenPay.Services >= 1.0.0",
       "Swashbuckle.AspNetCore >= 7.2.0"

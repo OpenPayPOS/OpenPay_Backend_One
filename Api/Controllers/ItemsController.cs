@@ -1,5 +1,6 @@
 ﻿namespace OpenPay.Api.Controllers;
 
+using OpenPay.Api.Utils;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
@@ -7,10 +8,11 @@ using OpenPay.Api.Models.Request;
 using OpenPay.Api.Models.Response;
 using OpenPay.Interfaces.Services;
 using OpenPay.Interfaces.Services.ServiceModels;
+using OpenPay.Api.Mappers;
 
 [Route("api/v1/[controller]")]
 [ApiController]
-public class ItemsController : ControllerBase
+public class ItemsController : ExceptionHandler
 {
     private readonly IItemService _itemService;
     private readonly ILogger<ItemsController> _logger;
@@ -27,7 +29,7 @@ public class ItemsController : ControllerBase
     {
         await foreach (var item in _itemService.GetAllAsync())
         {
-            yield return await MapDtoToModelAsync(item);
+            yield return await ItemMapper.MapDtoToModelAsync(item);
         } 
     }
 
@@ -41,19 +43,19 @@ public class ItemsController : ControllerBase
 
         var itemOptional = await _itemService.GetByIdAsync(id);
 
-        return await itemOptional.ProduceResultAsync(MapDtoToModelAsync, HandleException);
+        return await itemOptional.ProduceResultAsync(ItemMapper.MapDtoToModelAsync, HandleException);
     }
 
     [HttpPost]
     [ProducesResponseType<ItemResponse>(StatusCodes.Status201Created)]
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
-    public async Task<ActionResult<ItemResponse>> CreateAsync([FromBody] CreateItemRequest item)
+    public async Task<ActionResult<ItemResponse>> CreateAsync([FromForm] CreateItemRequest item)
     {
         var itemOptional = await _itemService.CreateAsync(item.Name, item.Price, item.TaxPercentage);
 
         return await itemOptional.ProduceResultAsync(async itemDTO =>
         {
-            return CreatedAtAction(nameof(GetByIdAsync), new { id = itemDTO.Id }, await MapDtoToModelAsync(itemDTO));
+            return CreatedAtAction(nameof(GetByIdAsync), new { id = itemDTO.Id }, await ItemMapper.MapDtoToModelAsync(itemDTO));
         }, HandleException);
     }
 
@@ -67,7 +69,7 @@ public class ItemsController : ControllerBase
 
         return await itemOptional.ProduceResultAsync(async itemDTO =>
         {
-            return CreatedAtAction(nameof(GetByIdAsync), new { id = itemDTO.Id }, await MapDtoToModelAsync(itemDTO));
+            return CreatedAtAction(nameof(GetByIdAsync), new { id = itemDTO.Id }, await ItemMapper.MapDtoToModelAsync(itemDTO));
         }, HandleException);
     }
 
@@ -80,26 +82,5 @@ public class ItemsController : ControllerBase
         var optional = await _itemService.DeleteAsync(id);
 
         return optional.ProduceResult(_ => NoContent(), HandleException);
-    }
-
-    private static Task<ItemResponse> MapDtoToModelAsync(ItemDTO item)
-    {
-        return Task.FromResult(new ItemResponse
-        {
-            Id = item.Id,
-            Name = item.Name,
-            Price = item.Price,
-            TaxPercentage = item.TaxPercentage,
-        });
-    }
-
-    private ActionResult HandleException(Exception exception)
-    {
-        return exception.GetType().Name switch
-        {
-            "NotFoundException" => NotFound(exception.Message),
-            "BadRequestException" => BadRequest(exception.Message),
-            _ => StatusCode(StatusCodes.Status500InternalServerError),
-        };
     }
 }

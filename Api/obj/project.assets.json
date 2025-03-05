@@ -4268,7 +4268,7 @@
     "version": "1.0.0",
     "restore": {
       "projectUniqueName": "C:\\Users\\marti\\Code\\OpenPay\\V1\\Backend\\Api\\Api.csproj",
-      "projectName": "Api",
+      "projectName": "OpenPay.Api",
       "projectPath": "C:\\Users\\marti\\Code\\OpenPay\\V1\\Backend\\Api\\Api.csproj",
       "packagesPath": "C:\\Users\\marti\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\marti\\Code\\OpenPay\\V1\\Backend\\Api\\obj\\",

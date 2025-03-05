@@ -14,6 +14,14 @@ builder.Services.AddControllers(options =>
 builder.Services.AddDataServices(builder.Configuration);
 builder.Services.AddApplicationServices();
 
+builder.Services.AddCors(setup =>
+{
+    setup.AddPolicy("frontend", policy =>
+    {
+        policy.AllowAnyHeader().AllowCredentials().AllowAnyMethod().WithOrigins(builder.Configuration["FrontendUrl"]);
+    });
+});
+
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(c =>
 {
@@ -44,6 +52,8 @@ if (app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 
 app.MapControllers();
+
+app.UseCors("frontend");
 
 app.Run();
 

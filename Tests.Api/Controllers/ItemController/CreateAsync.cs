@@ -8,7 +8,7 @@ using OpenPay.Interfaces.Services;
 using OpenPay.Interfaces.Services.ServiceModels;
 using OpenPay.Tests.Api.Helpers;
 
-namespace OpenPay.Tests.Api.ItemController;
+namespace OpenPay.Tests.Api.Controllers.ItemController;
 public class CreateAsync
 {
     [Theory]
@@ -85,12 +85,12 @@ public class CreateAsync
 
         _service.CreateAsync(model.Name, model.Price, model.TaxPercentage)
             .Returns(Task.FromResult(new Optional<ItemDTO>(new ItemDTO
-                {
-                    Id = Guid.NewGuid(),
-                    Name = model.Name,
-                    Price = model.Price,
-                    TaxPercentage = model.TaxPercentage
-                })));
+            {
+                Id = Guid.NewGuid(),
+                Name = model.Name,
+                Price = model.Price,
+                TaxPercentage = model.TaxPercentage
+            })));
 
         // Act
         var result = await itemsController.CreateAsync(model);

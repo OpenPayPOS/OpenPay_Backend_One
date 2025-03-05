@@ -3,7 +3,7 @@ using NSubstitute;
 using OpenPay.Interfaces.Services;
 using OpenPay.Interfaces.Services.ServiceModels;
 
-namespace OpenPay.Tests.Api.ItemController;
+namespace OpenPay.Tests.Api.Controllers.ItemController;
 public class GetAllAsync
 {
     [Fact]
@@ -15,7 +15,7 @@ public class GetAllAsync
         ItemsController itemsController = new ItemsController(_service, _logger);
 
         _service.GetAllAsync().Returns(Array.Empty<ItemDTO>().ToAsyncEnumerable());
-        
+
         List<ItemResponse> items = [];
 
         // Act

@@ -1,7 +1,7 @@
 using Microsoft.OpenApi.Models;
-using OpenPay.Api.Configuration;
 using OpenPay.Services.Configuration;
 using OpenPay.Data.Configuration;
+using OpenPay.Api.Configuration;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -49,6 +49,7 @@ if (app.Environment.IsDevelopment())
     });
 }
 
+
 app.UseHttpsRedirection();
 
 app.MapControllers();
@@ -58,6 +59,7 @@ app.UseCors("frontend");
 app.Run();
 
 // INFO: Task list legend:
+// INFO: INFO
 // INFO: TODO
 // INFO: HACK
 // INFO: UNDONE

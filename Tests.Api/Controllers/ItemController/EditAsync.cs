@@ -8,7 +8,7 @@ using OpenPay.Interfaces.Services;
 using OpenPay.Interfaces.Services.ServiceModels;
 using OpenPay.Tests.Api.Helpers;
 
-namespace OpenPay.Tests.Api.ItemController;
+namespace OpenPay.Tests.Api.Controllers.ItemController;
 public class EditAsync
 {
     [Theory]
@@ -43,7 +43,7 @@ public class EditAsync
         // This is done by model validation
         // Arrange
         Guid id = Guid.NewGuid();
-        var model = new EditItemRequest { Id = id, Price = price};
+        var model = new EditItemRequest { Id = id, Price = price };
 
         // Act
         var validationResults = ModelValidationHelper.ValidateModel(model);

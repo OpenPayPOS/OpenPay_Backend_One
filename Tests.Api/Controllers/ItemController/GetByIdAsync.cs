@@ -7,7 +7,7 @@ using NSubstitute;
 using OpenPay.Interfaces.Services;
 using OpenPay.Interfaces.Services.ServiceModels;
 
-namespace OpenPay.Tests.Api.ItemController;
+namespace OpenPay.Tests.Api.Controllers.ItemController;
 public class GetByIdAsync
 {
     [Fact]
@@ -57,7 +57,10 @@ public class GetByIdAsync
         Guid id = Guid.NewGuid();
         _service.GetByIdAsync(id).Returns(Task.FromResult(new Optional<ItemDTO>(new ItemDTO
         {
-            Id = id, Name = "test", Price = 10, TaxPercentage = 10
+            Id = id,
+            Name = "test",
+            Price = 10,
+            TaxPercentage = 10
         })));
 
         // Act

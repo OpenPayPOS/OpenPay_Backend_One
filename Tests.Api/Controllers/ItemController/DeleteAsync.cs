@@ -5,7 +5,7 @@ using Microsoft.Extensions.Logging;
 using NSubstitute;
 using OpenPay.Interfaces.Services;
 
-namespace OpenPay.Tests.Api.ItemController;
+namespace OpenPay.Tests.Api.Controllers.ItemController;
 public class DeleteAsync
 {
     [Fact]

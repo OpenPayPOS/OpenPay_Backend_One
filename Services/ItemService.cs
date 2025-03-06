@@ -6,16 +6,18 @@ using OpenPay.Interfaces.Data.Models;
 using OpenPay.Interfaces.Data.Repositories;
 using OpenPay.Interfaces.Services;
 using OpenPay.Interfaces.Services.ServiceModels;
+using OpenPay.Services.Common;
 using OpenPay.Services.Models;
 
 namespace OpenPay.Services;
-public class ItemService : IItemService
+public class ItemService : BaseService<Item, ItemDTO, ItemDataDTO>, IItemService
 {
     private readonly IItemRepository _itemRepository;
     private readonly ILogger<ItemService> _logger;
     private readonly IUnitOfWork _unitOfWork;
 
     public ItemService(IItemRepository itemRepository, ILogger<ItemService> logger, IUnitOfWork unitOfWork)
+        : base(itemRepository, logger, unitOfWork)
     {
         _itemRepository = itemRepository;
         _logger = logger;
@@ -29,26 +31,6 @@ public class ItemService : IItemService
             var item = Item.FromDataDTO(itemData);
             yield return await item.ToDTOAsync();
         }
-    }
-
-    public async Task<Optional<ItemDTO>> GetByIdAsync(Guid id)
-    {
-        var existsOptional = await _itemRepository.IdExistsAsync(id);
-
-        if (existsOptional.IsInvalid) return (Exception)existsOptional;
-
-        if (existsOptional.Handle(exists => !exists, _ => false))
-        {
-            return new NotFoundException("Item with that Guid could not be found.");
-        }
-
-        var itemData = await _itemRepository.GetByIdAsync(id);
-
-        return await itemData.HandleAsync(async data =>
-        {
-            Item item = Item.FromDataDTO(data);
-            return new Optional<ItemDTO>(await item.ToDTOAsync());
-        }, ex => ex);
     }
 
     public async Task<Optional<ItemDTO>> CreateAsync(string name, decimal price, decimal taxPercentage)
@@ -119,23 +101,8 @@ public class ItemService : IItemService
         }, ex => ex);
     }
 
-    public async Task<Optional> DeleteAsync(Guid id)
+    public override Item FromDataDTO(ItemDataDTO dataDTO)
     {
-        var existsOptional = await _itemRepository.IdExistsAsync(id);
-
-        if (existsOptional.IsInvalid) return new(existsOptional);
-
-        if (existsOptional.Handle(exists => !exists, _ => false))
-        {
-            return new(new NotFoundException("Item with that Guid could not be found."));
-        }
-
-        var itemData = await _itemRepository.DeleteAsync(id);
-
-        return await itemData.HandleAsync(async _ =>
-        {
-            await _unitOfWork.SaveChangesAsync();
-            return new Optional();
-        }, ex => new(ex) );
+        return Item.FromDataDTO(dataDTO);
     }
 }

@@ -2,7 +2,7 @@
 using OpenPay.Interfaces.Services.ServiceModels;
 
 namespace OpenPay.Services.Models;
-public class Item
+public class Item : BaseModel<Item, ItemDTO, ItemDataDTO>
 {
     public Guid Id { get; private set; }
     public string Name { get; private set; }
@@ -27,7 +27,7 @@ public class Item
         return new Item(dataDTO.Id, dataDTO.Name, dataDTO.Price, dataDTO.TaxPercentage);
     }
 
-    public ItemDataDTO ToDataDTO()
+    public override ItemDataDTO ToDataDTO()
     {
         return new ItemDataDTO
         {
@@ -38,7 +38,7 @@ public class Item
         };
     }
 
-    public Task<ItemDTO> ToDTOAsync()
+    public override Task<ItemDTO> ToDTOAsync()
     {
         return Task.FromResult(new ItemDTO
         {

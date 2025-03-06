@@ -2,6 +2,8 @@
 using OpenPay.Interfaces.Services.ServiceModels;
 
 namespace OpenPay.Api.Mappers;
+
+// TODO: write tests
 public class OrderMapper : IMapper<OrderResponse, OrderDTO>
 {
     public async Task<OrderResponse> MapDtoToModelAsync(OrderDTO orderDTO)

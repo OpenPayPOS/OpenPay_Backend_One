@@ -7,38 +7,15 @@ using OpenPay.Interfaces.Data.DataModels;
 using OpenPay.Interfaces.Data.Repositories;
 
 namespace OpenPay.Data.Repositories;
-public class ItemRepository : IItemRepository
+public class ItemRepository : BaseRepository<ItemDataModel, ItemDataDTO>, IItemRepository
 {
-    private AppDbContext _dbContext;
-    private ILogger<ItemRepository> _logger;
+    private readonly ILogger<ItemRepository> _logger;
 
     public ItemRepository(AppDbContext dbContext, ILogger<ItemRepository> logger)
+        : base(dbContext, logger)
     {
-        _dbContext = dbContext;
         _logger = logger;
     }
-
-    public IAsyncEnumerable<ItemDataDTO> GetAllAsync()
-    {
-        return _dbContext.Items.Select(i =>
-            MapToDataDTO(i)).AsAsyncEnumerable();
-    }
-
-    public async Task<Optional<ItemDataDTO>> GetByIdAsync(Guid id)
-    {
-        try
-        {
-            ItemDataModel? itemDataModel = await _dbContext.Items.FindAsync(id);
-            if (itemDataModel == null) return new NotFoundException("Item with that Id could not be found");
-
-            return MapToDataDTO(itemDataModel);
-        } catch (Exception ex)
-        {
-            _logger.LogError("Error occurred: {error}", ex.Message);
-            return ex;
-        }
-    }
-
 
     public async Task<Optional<ItemDataDTO>> CreateAsync(ItemDataDTO itemDataDTO)
     {
@@ -84,38 +61,6 @@ public class ItemRepository : IItemRepository
         }
     }
 
-    public async Task<Optional> DeleteAsync(Guid id)
-    {
-        try
-        {
-            ItemDataModel? itemDataModel = await _dbContext.Items.FindAsync(id);
-            if (itemDataModel == null) return new NotFoundException("Item with that Id could not be found");
-
-            _dbContext.Items.Remove(itemDataModel);
-            return new();
-        }
-        catch (Exception ex)
-        {
-            _logger.LogError("Error occurred: {error}", ex.Message);
-
-            return ex;
-        }
-    }
-     
-
-    public async Task<Optional<bool>> IdExistsAsync(Guid id)
-    {
-        try
-        {
-            return await _dbContext.Items.CountAsync(x => x.Id == id) > 0;
-        }
-        catch (Exception ex)
-        {
-            _logger.LogError("Error occurred: {error}", ex.Message);
-            return ex;
-        }
-    }
-
     public async Task<Optional<bool>> NameExistsAsync(string name)
     {
         try
@@ -129,7 +74,7 @@ public class ItemRepository : IItemRepository
         }
     }
 
-    private static ItemDataDTO MapToDataDTO(ItemDataModel itemDataModel)
+    protected override ItemDataDTO MapToDataDTO(ItemDataModel itemDataModel)
     {
         return new ItemDataDTO
         {

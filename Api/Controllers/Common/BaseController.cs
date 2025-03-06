@@ -5,6 +5,8 @@ using OpenPay.Api.Utils;
 using OpenPay.Interfaces.Services.Common;
 
 namespace OpenPay.Api.Controllers.Common;
+
+// TODO: edit controller tests to seperate base controller tests
 public class BaseController<TDTO, TModel> : ControllerBase where TDTO : struct
 {
     private readonly IBaseService<TDTO> _service;

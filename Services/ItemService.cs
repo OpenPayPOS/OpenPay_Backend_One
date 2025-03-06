@@ -39,7 +39,7 @@ public class ItemService : BaseService<Item, ItemDTO, ItemDataDTO>, IItemService
 
         if (existsOptional.IsInvalid) return (Exception)existsOptional;
 
-        if (existsOptional.Handle(exists => exists, _ => false))
+        if (existsOptional.Handle(exists => exists, _ => throw new Exception()))
         {
             return new BadRequestException("Item with that name already in system.");
         }
@@ -64,7 +64,7 @@ public class ItemService : BaseService<Item, ItemDTO, ItemDataDTO>, IItemService
 
         if (existsOptional.IsInvalid) return (Exception)existsOptional;
 
-        if (existsOptional.Handle(exists => !exists, _ => false))
+        if (existsOptional.Handle(exists => !exists, _ => throw new Exception()))
         {
             return new NotFoundException("Item with that Guid could not be found.");
         }
@@ -75,7 +75,7 @@ public class ItemService : BaseService<Item, ItemDTO, ItemDataDTO>, IItemService
 
             if (nameExistsOptional.IsInvalid) return (Exception)existsOptional;
 
-            if (nameExistsOptional.Handle(exists => exists, _ => false))
+            if (nameExistsOptional.Handle(exists => exists, _ => throw new Exception()))
             {
                 return new BadRequestException("Item with that name already in system.");
             }

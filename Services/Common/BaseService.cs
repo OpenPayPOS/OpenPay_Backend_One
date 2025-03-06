@@ -7,6 +7,8 @@ using OpenPay.Interfaces.Services.Common;
 using OpenPay.Services.Models;
 
 namespace OpenPay.Services.Common;
+
+// TODO: rewrite tests for services to seperate base service
 public abstract class BaseService<TModel, TDTO, TDataDTO>
         where TDTO : struct
         where TDataDTO : struct

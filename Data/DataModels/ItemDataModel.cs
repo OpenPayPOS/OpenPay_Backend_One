@@ -1,9 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore;
 
 namespace OpenPay.Data.DataModels;
-public class ItemDataModel
+public class ItemDataModel : BaseDataModel
 {
-    public Guid Id { get; set; }
     public string Name { get; set; }
     [Precision(16,2)]
     public decimal Price { get; set; }

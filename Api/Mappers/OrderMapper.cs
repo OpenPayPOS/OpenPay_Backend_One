@@ -2,17 +2,18 @@
 using OpenPay.Interfaces.Services.ServiceModels;
 
 namespace OpenPay.Api.Mappers;
-public static class OrderMapper
+public class OrderMapper : IMapper<OrderResponse, OrderDTO>
 {
-    public static async Task<OrderResponse> MapDtoToModelAsync(OrderDTO orderDTO)
+    public async Task<OrderResponse> MapDtoToModelAsync(OrderDTO orderDTO)
     {
+        ItemMapper itemMapper = new ItemMapper();
         List<OrderItemResponse> orderItems = new List<OrderItemResponse>();
         foreach (var orderItemDTO in orderDTO.Items)
         {
             orderItems.Add(new OrderItemResponse
             {
                 Amount = orderItemDTO.Amount,
-                Item = await ItemMapper.MapDtoToModelAsync(orderItemDTO.Item)
+                Item = await itemMapper.MapDtoToModelAsync(orderItemDTO.Item)
             });
         };
 

@@ -9,15 +9,17 @@ using OpenPay.Api.Models.Response;
 using OpenPay.Interfaces.Services;
 using OpenPay.Interfaces.Services.ServiceModels;
 using OpenPay.Api.Mappers;
+using OpenPay.Api.Controllers.Common;
 
 [Route("api/v1/[controller]")]
 [ApiController]
-public class ItemsController : ExceptionHandler
+public class ItemsController : BaseController<ItemDTO, ItemResponse>
 {
     private readonly IItemService _itemService;
     private readonly ILogger<ItemsController> _logger;
 
     public ItemsController(IItemService itemService, ILogger<ItemsController> logger)
+        : base (itemService, logger, new ItemMapper())
     {
         _itemService = itemService;
         _logger = logger;
@@ -29,21 +31,8 @@ public class ItemsController : ExceptionHandler
     {
         await foreach (var item in _itemService.GetAllAsync())
         {
-            yield return await ItemMapper.MapDtoToModelAsync(item);
+            yield return await _mapper.MapDtoToModelAsync(item);
         } 
-    }
-
-    [HttpGet("{id}")]
-    [ProducesResponseType<ItemResponse>(StatusCodes.Status200OK)]
-    [ProducesResponseType(StatusCodes.Status400BadRequest)]
-    [ProducesResponseType(StatusCodes.Status404NotFound)]
-    public async Task<ActionResult<ItemResponse>> GetByIdAsync(Guid id)
-    {
-        if (id == Guid.Empty) return BadRequest("Id cannot be empty.");
-
-        var itemOptional = await _itemService.GetByIdAsync(id);
-
-        return await itemOptional.ProduceResultAsync(ItemMapper.MapDtoToModelAsync, HandleException);
     }
 
     [HttpPost]
@@ -55,8 +44,8 @@ public class ItemsController : ExceptionHandler
 
         return await itemOptional.ProduceResultAsync(async itemDTO =>
         {
-            return CreatedAtAction(nameof(GetByIdAsync), new { id = itemDTO.Id }, await ItemMapper.MapDtoToModelAsync(itemDTO));
-        }, HandleException);
+            return CreatedAtAction(nameof(GetByIdAsync), new { id = itemDTO.Id }, await _mapper.MapDtoToModelAsync(itemDTO));
+        }, _exceptionHandler.HandleException);
     }
 
     [HttpPatch]
@@ -69,18 +58,7 @@ public class ItemsController : ExceptionHandler
 
         return await itemOptional.ProduceResultAsync(async itemDTO =>
         {
-            return CreatedAtAction(nameof(GetByIdAsync), new { id = itemDTO.Id }, await ItemMapper.MapDtoToModelAsync(itemDTO));
-        }, HandleException);
-    }
-
-    [HttpDelete("{id}")]
-    [ProducesResponseType(StatusCodes.Status204NoContent)]
-    [ProducesResponseType(StatusCodes.Status400BadRequest)]
-    public async Task<ActionResult> DeleteAsync(Guid id)
-    {
-        if (id == Guid.Empty) return BadRequest("Guid cannot be empty");
-        var optional = await _itemService.DeleteAsync(id);
-
-        return optional.ProduceResult(_ => NoContent(), HandleException);
+            return CreatedAtAction(nameof(GetByIdAsync), new { id = itemDTO.Id }, await _mapper.MapDtoToModelAsync(itemDTO));
+        }, _exceptionHandler.HandleException);
     }
 }

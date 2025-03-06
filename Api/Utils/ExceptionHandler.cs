@@ -3,7 +3,7 @@
 namespace OpenPay.Api.Utils;
 public class ExceptionHandler : ControllerBase
 {
-    protected ActionResult HandleException(Exception exception)
+    public ActionResult HandleException(Exception exception)
     {
         return exception.GetType().Name switch
         {

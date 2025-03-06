@@ -6,32 +6,21 @@ using OpenPay.Api.Models.Response;
 using OpenPay.Interfaces.Services;
 using OpenPay.Interfaces.Services.ServiceModels;
 using OpenPay.Api.Mappers;
+using OpenPay.Api.Controllers.Common;
 
 namespace OpenPay.Api.Controllers;
 [ApiController]
 [Route("api/v1/[controller]")]
-public class OrdersController : ExceptionHandler
+public class OrdersController : BaseController<OrderDTO, OrderResponse>
 {
     private readonly IOrderService _orderService;
     private readonly ILogger<OrdersController> _logger;
 
     public OrdersController(IOrderService orderService, ILogger<OrdersController> logger)
+        : base(orderService, logger, new OrderMapper())
     {
         _orderService = orderService;
         _logger = logger;
-    }
-
-    [HttpGet("{id}")]
-    [ProducesResponseType<OrderResponse>(StatusCodes.Status200OK)]
-    [ProducesResponseType(StatusCodes.Status400BadRequest)]
-    [ProducesResponseType(StatusCodes.Status404NotFound)]
-    public async Task<ActionResult<OrderResponse>> GetByIdAsync(Guid id)
-    {
-        if (id == Guid.Empty) return BadRequest("Id cannot be empty.");
-
-        var itemOptional = await _orderService.GetByIdAsync(id);
-
-        return await itemOptional.ProduceResultAsync(OrderMapper.MapDtoToModelAsync, HandleException);
     }
 
     [HttpPost]
@@ -54,7 +43,7 @@ public class OrdersController : ExceptionHandler
 
         return await itemOptional.ProduceResultAsync(async itemDTO =>
         {
-            return CreatedAtAction(nameof(GetByIdAsync), new { id = itemDTO.Id }, await OrderMapper.MapDtoToModelAsync(itemDTO));
-        }, HandleException);
+            return CreatedAtAction(nameof(GetByIdAsync), new { id = itemDTO.Id }, await _mapper.MapDtoToModelAsync(itemDTO));
+        }, _exceptionHandler.HandleException);
     }
 }

@@ -2,9 +2,9 @@
 using OpenPay.Interfaces.Services.ServiceModels;
 
 namespace OpenPay.Api.Mappers;
-public static class ItemMapper
+public class ItemMapper : IMapper<ItemResponse, ItemDTO>
 {
-    public static Task<ItemResponse> MapDtoToModelAsync(ItemDTO item)
+    public Task<ItemResponse> MapDtoToModelAsync(ItemDTO item)
     {
         return Task.FromResult(new ItemResponse
         {

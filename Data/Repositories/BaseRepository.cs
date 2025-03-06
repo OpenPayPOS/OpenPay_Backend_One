@@ -9,18 +9,18 @@ namespace OpenPay.Data.Repositories;
 
 public abstract class BaseRepository<TModel, TDTO> : IBaseRepository<TDTO> where TModel : BaseDataModel
 {
-    protected readonly AppDbContext _dbContext;
+    protected readonly DbSet<TModel> _set;
     private readonly ILogger<BaseRepository<TModel, TDTO>> _logger;
 
-    protected BaseRepository(AppDbContext dbContext, ILogger<BaseRepository<TModel, TDTO>> logger)
+    protected BaseRepository(DbSet<TModel> set, ILogger<BaseRepository<TModel, TDTO>> logger)
     {
-        _dbContext = dbContext;
+        _set = set;
         _logger = logger;
     }
 
     public IAsyncEnumerable<TDTO> GetAllAsync()
     {
-        return _dbContext.Set<TModel>().Select(i =>
+        return _set.Select(i =>
             MapToDataDTO(i)).AsAsyncEnumerable();
     }
 
@@ -28,7 +28,7 @@ public abstract class BaseRepository<TModel, TDTO> : IBaseRepository<TDTO> where
     {
         try
         {
-            TModel? model = await _dbContext.Set<TModel>().FindAsync(id);
+            TModel? model = await _set.FindAsync(id);
             if (model == null) return new NotFoundException("Item with that Id could not be found");
 
             return MapToDataDTO(model);
@@ -44,11 +44,10 @@ public abstract class BaseRepository<TModel, TDTO> : IBaseRepository<TDTO> where
     {
         try
         {
-            var set = _dbContext.Set<TModel>();
-            TModel? model = await set.FindAsync(id);
+            TModel? model = await _set.FindAsync(id);
             if (model == null) return new NotFoundException("Item with that Id could not be found");
 
-            set.Remove(model);
+            _set.Remove(model);
             return new();
         }
         catch (Exception ex)
@@ -63,7 +62,7 @@ public abstract class BaseRepository<TModel, TDTO> : IBaseRepository<TDTO> where
     {
         try
         {
-            return await _dbContext.Set<TModel>().CountAsync(x => x.Id == id) > 0;
+            return await _set.CountAsync(x => x.Id == id) > 0;
         }
         catch (Exception ex)
         {

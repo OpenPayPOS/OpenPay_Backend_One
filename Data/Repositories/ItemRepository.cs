@@ -12,7 +12,7 @@ public class ItemRepository : BaseRepository<ItemDataModel, ItemDataDTO>, IItemR
     private readonly ILogger<ItemRepository> _logger;
 
     public ItemRepository(AppDbContext dbContext, ILogger<ItemRepository> logger)
-        : base(dbContext, logger)
+        : base(dbContext.Items, logger)
     {
         _logger = logger;
     }
@@ -29,7 +29,7 @@ public class ItemRepository : BaseRepository<ItemDataModel, ItemDataDTO>, IItemR
 
         try
         {
-            await _dbContext.Items.AddAsync(itemDataModel);
+            await _set.AddAsync(itemDataModel);
             return MapToDataDTO(itemDataModel);
 
         } catch (Exception ex)
@@ -44,7 +44,7 @@ public class ItemRepository : BaseRepository<ItemDataModel, ItemDataDTO>, IItemR
     {
         try
         {
-            ItemDataModel? itemDataModel = await _dbContext.Items.FindAsync(id);
+            ItemDataModel? itemDataModel = await _set.FindAsync(id);
             if (itemDataModel == null) return new NotFoundException("Item with that Id could not be found");
 
             if (editItemDataDTO.Name != null) itemDataModel.Name = editItemDataDTO.Name;
@@ -65,7 +65,7 @@ public class ItemRepository : BaseRepository<ItemDataModel, ItemDataDTO>, IItemR
     {
         try
         {
-            return await _dbContext.Items.CountAsync(x => x.Name == name) > 0;
+            return await _set.CountAsync(x => x.Name == name) > 0;
         }
         catch (Exception ex)
         {

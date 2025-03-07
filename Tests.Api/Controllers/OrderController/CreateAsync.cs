@@ -74,7 +74,7 @@ public class CreateAsync
                 new OrderDTO
                 {
                     Id = Guid.NewGuid(),
-                    Items = new List<OrderItemDTO>
+                    OrderItems = new List<OrderItemDTO>
                     {
                         new OrderItemDTO
                         {

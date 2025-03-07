@@ -3,7 +3,7 @@ using Interfaces.Common.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using NSubstitute;
-using OpenPay.Interfaces.Data.DataModels;
+using OpenPay.Interfaces.Data.DataModels.Item;
 using OpenPay.Interfaces.Data.Models;
 using OpenPay.Interfaces.Data.Repositories;
 using OpenPay.Services;

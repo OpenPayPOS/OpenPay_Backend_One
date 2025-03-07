@@ -1,5 +1,5 @@
 ﻿using Interfaces.Common.Models;
-using OpenPay.Interfaces.Data.DataModels;
+using OpenPay.Interfaces.Data.DataModels.Item;
 using OpenPay.Interfaces.Data.Repositories.Common;
 
 namespace OpenPay.Interfaces.Data.Repositories;

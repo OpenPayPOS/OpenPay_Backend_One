@@ -1,6 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using NSubstitute.ExceptionExtensions;
-using OpenPay.Interfaces.Data.DataModels;
+using OpenPay.Interfaces.Data.DataModels.Item;
 
 namespace Tests.Data.ItemRepositoryTests;
 public class EditAsync

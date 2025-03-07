@@ -3,7 +3,7 @@ using Interfaces.Common.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 using OpenPay.Data.DataModels;
-using OpenPay.Interfaces.Data.DataModels;
+using OpenPay.Interfaces.Data.DataModels.Item;
 using OpenPay.Interfaces.Data.Repositories;
 
 namespace OpenPay.Data.Repositories;

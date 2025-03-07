@@ -1,6 +1,5 @@
-﻿using Interfaces.Common.Exceptions;
-using Microsoft.EntityFrameworkCore;
-using OpenPay.Interfaces.Data.DataModels;
+﻿using Microsoft.EntityFrameworkCore;
+using OpenPay.Interfaces.Data.DataModels.Item;
 
 namespace Tests.Data.ItemRepositoryTests;
 public class CreateAsync

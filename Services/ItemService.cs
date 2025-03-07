@@ -1,27 +1,31 @@
 ﻿using Interfaces.Common.Exceptions;
 using Interfaces.Common.Models;
 using Microsoft.Extensions.Logging;
-using OpenPay.Interfaces.Data.DataModels;
+using OpenPay.Interfaces.Data.DataModels.Item;
 using OpenPay.Interfaces.Data.Models;
 using OpenPay.Interfaces.Data.Repositories;
 using OpenPay.Interfaces.Services;
+using OpenPay.Interfaces.Services.Internal;
 using OpenPay.Interfaces.Services.ServiceModels;
 using OpenPay.Services.Common;
 using OpenPay.Services.Models;
 
 namespace OpenPay.Services;
-public class ItemService : BaseService<Item, ItemDTO, ItemDataDTO>, IItemService
+public class ItemService
+    : BaseService<Item, ItemDTO, ItemDataDTO>,
+    IItemService,
+    IInternalItemService
 {
     private readonly IItemRepository _itemRepository;
     private readonly ILogger<ItemService> _logger;
-    private readonly IUnitOfWork _unitOfWork;
 
-    public ItemService(IItemRepository itemRepository, ILogger<ItemService> logger, IUnitOfWork unitOfWork)
+    public ItemService(IItemRepository itemRepository,
+        ILogger<ItemService> logger,
+        IUnitOfWork unitOfWork)
         : base(itemRepository, logger, unitOfWork)
     {
         _itemRepository = itemRepository;
         _logger = logger;
-        _unitOfWork = unitOfWork;
     }
 
     public async IAsyncEnumerable<ItemDTO> GetAllAsync()

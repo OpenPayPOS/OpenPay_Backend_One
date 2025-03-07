@@ -57,7 +57,7 @@ public class GetByIdAsync
         _service.GetByIdAsync(id).Returns(Task.FromResult(new Optional<OrderDTO>(new OrderDTO
         {
             Id = id,
-            Items = new List<OrderItemDTO>
+            OrderItems = new List<OrderItemDTO>
             {
                 new OrderItemDTO
                 {

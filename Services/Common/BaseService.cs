@@ -16,7 +16,7 @@ public abstract class BaseService<TModel, TDTO, TDataDTO>
 {
     private readonly IBaseRepository<TDataDTO> _repository;
     private readonly ILogger<BaseService<TModel, TDTO, TDataDTO>> _logger;
-    private readonly IUnitOfWork _unitOfWork;
+    protected readonly IUnitOfWork _unitOfWork;
 
     protected BaseService(IBaseRepository<TDataDTO> repository,
         ILogger<BaseService<TModel, TDTO, TDataDTO>> logger,
@@ -64,6 +64,11 @@ public abstract class BaseService<TModel, TDTO, TDataDTO>
             await _unitOfWork.SaveChangesAsync();
             return new Optional();
         }, ex => new(ex));
+    }
+
+    public Task<Optional<bool>> IdExistsAsync(Guid id)
+    {
+        return _repository.IdExistsAsync(id);
     }
 
     public abstract TModel FromDataDTO(TDataDTO dataDTO);

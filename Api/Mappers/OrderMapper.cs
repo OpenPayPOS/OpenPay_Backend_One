@@ -10,7 +10,7 @@ public class OrderMapper : IMapper<OrderResponse, OrderDTO>
     {
         ItemMapper itemMapper = new ItemMapper();
         List<OrderItemResponse> orderItems = new List<OrderItemResponse>();
-        foreach (var orderItemDTO in orderDTO.Items)
+        foreach (var orderItemDTO in orderDTO.OrderItems)
         {
             orderItems.Add(new OrderItemResponse
             {

@@ -2,7 +2,8 @@
 public struct OrderDTO
 {
     public Guid Id { get; set; }
-    public List<OrderItemDTO> Items { get; set; }
+    public List<OrderItemDTO> OrderItems { get; set; }
+    public DateTime CreatedTime { get; set; }
 }
 
 public struct OrderItemDTO

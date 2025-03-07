@@ -1,4 +1,4 @@
-﻿using OpenPay.Interfaces.Data.DataModels;
+﻿using OpenPay.Interfaces.Data.DataModels.Item;
 using OpenPay.Interfaces.Services.ServiceModels;
 
 namespace OpenPay.Services.Models;

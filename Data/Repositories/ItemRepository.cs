@@ -3,6 +3,7 @@ using Interfaces.Common.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 using OpenPay.Data.DataModels;
+using OpenPay.Data.Mappers;
 using OpenPay.Interfaces.Data.DataModels.Item;
 using OpenPay.Interfaces.Data.Repositories;
 
@@ -12,7 +13,7 @@ public class ItemRepository : BaseRepository<ItemDataModel, ItemDataDTO>, IItemR
     private readonly ILogger<ItemRepository> _logger;
 
     public ItemRepository(AppDbContext dbContext, ILogger<ItemRepository> logger)
-        : base(dbContext.Items, logger)
+        : base(dbContext.Items, logger, new ItemMapper())
     {
         _logger = logger;
     }
@@ -30,7 +31,7 @@ public class ItemRepository : BaseRepository<ItemDataModel, ItemDataDTO>, IItemR
         try
         {
             await _set.AddAsync(itemDataModel);
-            return MapToDataDTO(itemDataModel);
+            return _mapper.MapToDataDTO(itemDataModel);
 
         } catch (Exception ex)
         {
@@ -51,7 +52,7 @@ public class ItemRepository : BaseRepository<ItemDataModel, ItemDataDTO>, IItemR
             if (editItemDataDTO.Price != null) itemDataModel.Price = (decimal)editItemDataDTO.Price;
             if (editItemDataDTO.TaxPercentage != null) itemDataModel.TaxPercentage = (decimal)editItemDataDTO.TaxPercentage;
 
-            return MapToDataDTO(itemDataModel);
+            return _mapper.MapToDataDTO(itemDataModel);
         }
         catch (Exception ex)
         {
@@ -72,16 +73,5 @@ public class ItemRepository : BaseRepository<ItemDataModel, ItemDataDTO>, IItemR
             _logger.LogError("Error occurred: {error}", ex.Message);
             return ex;
         }
-    }
-
-    protected override ItemDataDTO MapToDataDTO(ItemDataModel itemDataModel)
-    {
-        return new ItemDataDTO
-        {
-            Id = itemDataModel.Id,
-            Name = itemDataModel.Name,
-            Price = itemDataModel.Price,
-            TaxPercentage = itemDataModel.TaxPercentage,
-        };
     }
 }

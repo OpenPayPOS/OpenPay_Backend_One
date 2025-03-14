@@ -20,5 +20,6 @@ public static class RegisterServices
 
         services.AddScoped<IUnitOfWork, UnitOfWork>();
         services.AddScoped<IItemRepository, ItemRepository>();
+        services.AddScoped<IOrderRepository, OrderRepository>();
     }
 }

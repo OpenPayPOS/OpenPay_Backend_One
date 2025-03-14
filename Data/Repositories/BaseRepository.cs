@@ -22,13 +22,13 @@ public abstract class BaseRepository<TModel, TDTO> : IBaseRepository<TDTO>
         _mapper = mapper;
     }
 
-    public IAsyncEnumerable<TDTO> GetAllAsync()
+    public virtual IAsyncEnumerable<TDTO> GetAllAsync()
     {
         return _set.Select(i =>
             _mapper.MapToDataDTO(i)).AsAsyncEnumerable();
     }
 
-    public async Task<Optional<TDTO>> GetByIdAsync(Guid id)
+    public async virtual Task<Optional<TDTO>> GetByIdAsync(Guid id)
     {
         try
         {
@@ -44,7 +44,7 @@ public abstract class BaseRepository<TModel, TDTO> : IBaseRepository<TDTO>
         }
     }
 
-    public async Task<Optional> DeleteAsync(Guid id)
+    public async virtual Task<Optional> DeleteAsync(Guid id)
     {
         try
         {

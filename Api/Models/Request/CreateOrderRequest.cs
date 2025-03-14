@@ -5,7 +5,7 @@ namespace OpenPay.Api.Models.Request;
 public class CreateOrderRequest
 {
     [Required(ErrorMessage = "Items are required.")]
-    [MinLength(1, ErrorMessage = "At least an item is required.")]
+    //[MinLength(1, ErrorMessage = "At least an item is required.")]
     public List<CreateOrderItem>? OrderItems { get; set; }
     [DataType(DataType.Date)]
     public DateTime? CreatedTime { get; set; }

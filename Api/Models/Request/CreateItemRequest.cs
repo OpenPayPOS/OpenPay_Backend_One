@@ -1,4 +1,5 @@
-﻿using OpenPay.Api.Models.Annotations;
+﻿using Microsoft.AspNetCore.Http;
+using OpenPay.Api.Models.Annotations;
 using System.ComponentModel.DataAnnotations;
 
 namespace OpenPay.Api.Models.Request;
@@ -22,4 +23,9 @@ public class CreateItemRequest
     [Range(0d, 100d, ErrorMessage = "Tax percentage must be between 0 and 100.")]
     [ValidPrice(ErrorMessage = "Percentage has to have at most 2 decimals.")]
     public decimal TaxPercentage { get; set; }
+
+    [Required(ErrorMessage = "Image is required")]
+    [DataType(DataType.Upload)]
+    [AllowedFileTypes([".jpg", ".png"])]
+    public IFormFile Image { get; set; }
 }

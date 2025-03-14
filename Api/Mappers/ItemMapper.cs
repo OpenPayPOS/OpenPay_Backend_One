@@ -14,6 +14,7 @@ public class ItemMapper : IMapper<ItemResponse, ItemDTO>
             Name = item.Name,
             Price = item.Price,
             TaxPercentage = item.TaxPercentage,
+            ImagePath = item.ImagePath
         });
     }
 }

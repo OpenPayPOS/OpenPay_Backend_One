@@ -13,6 +13,7 @@ public class ItemMapper : IMapper<ItemDataModel, ItemDataDTO>
             Name = itemDataModel.Name,
             Price = itemDataModel.Price,
             TaxPercentage = itemDataModel.TaxPercentage,
+            ImagePath = itemDataModel.ImagePath
         };
     }
 }

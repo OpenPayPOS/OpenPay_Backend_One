@@ -3,7 +3,6 @@ using Interfaces.Common.Models;
 using Microsoft.Extensions.Logging;
 using OpenPay.Interfaces.Data.Models;
 using OpenPay.Interfaces.Data.Repositories.Common;
-using OpenPay.Interfaces.Services.Common;
 using OpenPay.Services.Models;
 
 namespace OpenPay.Services.Common;

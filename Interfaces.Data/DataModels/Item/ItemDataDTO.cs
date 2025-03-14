@@ -5,4 +5,5 @@ public struct ItemDataDTO
     public string Name { get; set; }
     public decimal Price { get; set; }
     public decimal TaxPercentage { get; set; }
+    public string ImagePath { get; set; }
 }

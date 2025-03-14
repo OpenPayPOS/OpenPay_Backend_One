@@ -37,7 +37,7 @@ public class ItemService
         }
     }
 
-    public async Task<Optional<ItemDTO>> CreateAsync(string name, decimal price, decimal taxPercentage)
+    public async Task<Optional<ItemDTO>> CreateAsync(string name, decimal price, decimal taxPercentage, string imagePath)
     {
         var existsOptional = await _itemRepository.NameExistsAsync(name);
 
@@ -48,7 +48,7 @@ public class ItemService
             return new BadRequestException("Item with that name already in system.");
         }
 
-        Item item = Item.Create(name, price, taxPercentage);
+        Item item = Item.Create(name, price, taxPercentage, imagePath);
         var itemOptional = await _itemRepository.CreateAsync(item.ToDataDTO());
 
         return await itemOptional.HandleAsync(async data =>

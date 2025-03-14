@@ -26,6 +26,7 @@ public class ItemRepository : BaseRepository<ItemDataModel, ItemDataDTO>, IItemR
             Name = itemDataDTO.Name,
             Price = itemDataDTO.Price,
             TaxPercentage = itemDataDTO.TaxPercentage,
+            ImagePath = itemDataDTO.ImagePath
         };
 
         try

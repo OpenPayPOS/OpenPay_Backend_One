@@ -4,7 +4,6 @@ using Microsoft.Extensions.Logging;
 using OpenPay.Interfaces.Data.DataModels.Order;
 using OpenPay.Interfaces.Data.Models;
 using OpenPay.Interfaces.Data.Repositories;
-using OpenPay.Interfaces.Data.Repositories.Common;
 using OpenPay.Interfaces.Services;
 using OpenPay.Interfaces.Services.Internal;
 using OpenPay.Interfaces.Services.ServiceModels;
@@ -18,7 +17,7 @@ public class OrderService : BaseService<Order, OrderDTO, OrderDataDTO>, IOrderSe
     private readonly IInternalItemService _itemService;
     public OrderService(IOrderRepository repository,
         ILogger<BaseService<Order, OrderDTO, OrderDataDTO>> logger,
-        IUnitOfWork unitOfWork, ItemService itemService)
+        IUnitOfWork unitOfWork, IInternalItemService itemService)
         : base(repository, logger, unitOfWork)
     {
         _itemService = itemService;

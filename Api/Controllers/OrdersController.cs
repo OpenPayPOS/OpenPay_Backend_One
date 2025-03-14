@@ -1,5 +1,4 @@
-﻿using OpenPay.Api.Utils;
-using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
 using OpenPay.Api.Models.Request;
 using OpenPay.Api.Models.Response;
@@ -26,7 +25,7 @@ public class OrdersController : BaseController<OrderDTO, OrderResponse>
     [HttpPost]
     [ProducesResponseType<OrderResponse>(StatusCodes.Status201Created)]
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
-    public async Task<ActionResult<OrderResponse>> CreateAsync([FromForm] CreateOrderRequest order)
+    public async Task<ActionResult<OrderResponse>> CreateAsync([FromBody] CreateOrderRequest order)
     {
         List<CreateOrderItemDTO> items = new List<CreateOrderItemDTO>();
 

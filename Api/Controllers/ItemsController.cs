@@ -10,6 +10,7 @@ using OpenPay.Interfaces.Services;
 using OpenPay.Interfaces.Services.ServiceModels;
 using OpenPay.Api.Mappers;
 using OpenPay.Api.Controllers.Common;
+using Microsoft.AspNetCore.Authorization;
 
 [Route("api/v1/[controller]")]
 [ApiController]
@@ -40,7 +41,24 @@ public class ItemsController : BaseController<ItemDTO, ItemResponse>
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
     public async Task<ActionResult<ItemResponse>> CreateAsync([FromForm] CreateItemRequest item)
     {
-        var itemOptional = await _itemService.CreateAsync(item.Name, item.Price, item.TaxPercentage);
+        var file = item.Image;
+        var slnPath = Directory.GetParent(Directory.GetCurrentDirectory()).ToString();
+        var uploadFolder = Path.Combine(slnPath, "ImageServer", "wwwroot", "uploads");
+
+        if (!Directory.Exists(uploadFolder))
+        {
+            Directory.CreateDirectory(uploadFolder);
+        }
+
+        string guid = Guid.NewGuid().ToString();
+        string fileType = file.FileName.Split('.').Reverse().ToList()[0];
+        var filePath = Path.Combine(uploadFolder, $"{guid}.{fileType}");
+        using (var fileStream = new FileStream(filePath, FileMode.Create))
+        {
+            await file.CopyToAsync(fileStream).ConfigureAwait(false);
+        }
+
+        var itemOptional = await _itemService.CreateAsync(item.Name, item.Price, item.TaxPercentage, $"{guid}.{fileType}");
 
         return await itemOptional.ProduceResultAsync(async itemDTO =>
         {

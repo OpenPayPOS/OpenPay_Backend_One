@@ -8,23 +8,25 @@ public class Item : BaseModel<Item, ItemDTO, ItemDataDTO>
     public string Name { get; private set; }
     public decimal Price { get; private set; }
     public decimal TaxPercentage { get; private set; }
+    public string ImagePath { get; }
 
-    private Item(Guid id, string name, decimal price, decimal taxPercentage)
+    private Item(Guid id, string name, decimal price, decimal taxPercentage, string imagePath)
     {
         Id = id;
         Name = name;
         Price = price;
         TaxPercentage = taxPercentage;
+        ImagePath = imagePath;
     }
 
-    public static Item Create(string name, decimal price, decimal taxPercentage)
+    public static Item Create(string name, decimal price, decimal taxPercentage, string imagePath)
     {
-        return new Item(Guid.NewGuid(), name, price, taxPercentage);
+        return new Item(Guid.NewGuid(), name, price, taxPercentage, imagePath);
     }
 
     public static Item FromDataDTO(ItemDataDTO dataDTO)
     {
-        return new Item(dataDTO.Id, dataDTO.Name, dataDTO.Price, dataDTO.TaxPercentage);
+        return new Item(dataDTO.Id, dataDTO.Name, dataDTO.Price, dataDTO.TaxPercentage, dataDTO.ImagePath);
     }
 
     public override ItemDataDTO ToDataDTO()
@@ -34,7 +36,8 @@ public class Item : BaseModel<Item, ItemDTO, ItemDataDTO>
             Id = Id,
             Name = Name,
             Price = Price,
-            TaxPercentage = TaxPercentage
+            TaxPercentage = TaxPercentage,
+            ImagePath = ImagePath
         };
     }
 
@@ -45,7 +48,8 @@ public class Item : BaseModel<Item, ItemDTO, ItemDataDTO>
             Id = Id,
             Name = Name,
             Price = Price,
-            TaxPercentage = TaxPercentage
+            TaxPercentage = TaxPercentage,
+            ImagePath = ImagePath
         });
     }
 }

@@ -15,8 +15,8 @@ public class GetAllAsync
         var logger = Substitute.For<ILogger<ItemRepository>>();
         var repository = new ItemRepository(dbContext, logger);
 
-        await dbContext.Items.AddAsync(new ItemDataModel { Id = Guid.NewGuid(), Name = "Item1", Price = 10.5m, TaxPercentage = 5m });
-        await dbContext.Items.AddAsync(new ItemDataModel { Id = Guid.NewGuid(), Name = "Item2", Price = 20m, TaxPercentage = 10m });
+        await dbContext.Items.AddAsync(new ItemDataModel { Id = Guid.NewGuid(), Name = "Item1", Price = 10.5m, TaxPercentage = 5m, ImagePath = "test" });
+        await dbContext.Items.AddAsync(new ItemDataModel { Id = Guid.NewGuid(), Name = "Item2", Price = 20m, TaxPercentage = 10m, ImagePath = "test2" });
         await dbContext.SaveChangesAsync();
 
         // Act

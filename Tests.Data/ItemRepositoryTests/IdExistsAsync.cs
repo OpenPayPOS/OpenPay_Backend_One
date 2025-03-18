@@ -17,7 +17,7 @@ public class IdExistsAsync
         var repository = new ItemRepository(dbContext, logger);
 
         var itemId = Guid.NewGuid();
-        await dbContext.Items.AddAsync(new ItemDataModel { Id = itemId, Name = "ExistingItem", Price = 10m, TaxPercentage = 5m });
+        await dbContext.Items.AddAsync(new ItemDataModel { Id = itemId, Name = "ExistingItem", Price = 10m, TaxPercentage = 5m, ImagePath = "test" });
         await dbContext.SaveChangesAsync();
 
         // Act

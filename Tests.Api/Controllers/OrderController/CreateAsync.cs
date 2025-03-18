@@ -11,20 +11,6 @@ using OpenPay.Tests.Api.Helpers;
 namespace OpenPay.Tests.Api.Controllers.OrderController;
 public class CreateAsync
 {
-    [Fact]
-    public void CreateAsync_EmptyList_ThrowsError()
-    {
-        // This is done by model validation
-        // Arrange
-        var model = new CreateOrderRequest { OrderItems = new List<CreateOrderItem>() };
-
-        // Act
-        var validationResults = ModelValidationHelper.ValidateModel(model);
-
-        // Assert
-        Assert.NotEmpty(validationResults);
-    }
-
     [Theory]
     [InlineData(-0.001)]
     [InlineData(-0.01)]

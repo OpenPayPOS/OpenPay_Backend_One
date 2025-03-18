@@ -30,11 +30,12 @@ public class CreateAsync
             Id = id,
             Name = "asdf",
             Price = 11,
-            TaxPercentage = 11
+            TaxPercentage = 11,
+            ImagePath = "file.png"
         });
 
         // Act
-        var response = await _service.CreateAsync("test", 10, 10);
+        var response = await _service.CreateAsync("test", 10, 10, "filename.png");
 
         // Assert
         await _repository.Received().NameExistsAsync(Arg.Any<string>());
@@ -64,7 +65,7 @@ public class CreateAsync
 
 
         // Act
-        var response = await _service.CreateAsync("test", 10, 10);
+        var response = await _service.CreateAsync("test", 10, 10, "filename.png");
 
         // Assert
         await _repository.Received().NameExistsAsync(Arg.Any<string>());

@@ -19,7 +19,7 @@ public class NameExistsAsync
         var repository = new ItemRepository(dbContext, logger);
 
         var name = "NonExistingItem";
-        dbContext.Items.Add(new ItemDataModel { Id = Guid.NewGuid(), Name = "ExistingItem", Price = 10m, TaxPercentage = 5m });
+        dbContext.Items.Add(new ItemDataModel { Id = Guid.NewGuid(), Name = "ExistingItem", Price = 10m, TaxPercentage = 5m , ImagePath = "test" });
         await dbContext.SaveChangesAsync();
 
         // Act
@@ -44,7 +44,7 @@ public class NameExistsAsync
         var repository = new ItemRepository(dbContext, logger);
 
         var name = "ExistingItem";
-        dbContext.Items.Add(new ItemDataModel { Id = Guid.NewGuid(), Name = "ExistingItem", Price = 10m, TaxPercentage = 5m });
+        dbContext.Items.Add(new ItemDataModel { Id = Guid.NewGuid(), Name = "ExistingItem", Price = 10m, TaxPercentage = 5m , ImagePath = "test" });
         await dbContext.SaveChangesAsync();
 
         // Act

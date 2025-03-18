@@ -1,5 +1,6 @@
 ﻿using Interfaces.Common.Exceptions;
 using Interfaces.Common.Models;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using NSubstitute;
@@ -80,23 +81,25 @@ public class CreateAsync
         IItemService _service = Substitute.For<IItemService>();
         ILogger<ItemsController> _logger = Substitute.For<ILogger<ItemsController>>();
         ItemsController itemsController = new ItemsController(_service, _logger);
+        IFormFile _image = new FormFile(new MemoryStream(), 0, 0, "name", "image.png");
 
-        var model = new CreateItemRequest { Name = RandomString.Random(3, 255), Price = 10, TaxPercentage = 1 };
+        var model = new CreateItemRequest { Name = RandomString.Random(3, 255), Price = 10, TaxPercentage = 1, Image = _image };
 
-        _service.CreateAsync(model.Name, model.Price, model.TaxPercentage)
+        _service.CreateAsync(model.Name, model.Price, model.TaxPercentage, Arg.Any<string>())
             .Returns(Task.FromResult(new Optional<ItemDTO>(new ItemDTO
             {
                 Id = Guid.NewGuid(),
                 Name = model.Name,
                 Price = model.Price,
-                TaxPercentage = model.TaxPercentage
+                TaxPercentage = model.TaxPercentage,
+                ImagePath = _image.FileName
             })));
 
         // Act
         var result = await itemsController.CreateAsync(model);
 
         // Assert
-        await _service.Received(1).CreateAsync(Arg.Any<string>(), Arg.Any<decimal>(), Arg.Any<decimal>());
+        await _service.Received(1).CreateAsync(Arg.Any<string>(), Arg.Any<decimal>(), Arg.Any<decimal>(), Arg.Any<string>());
         Assert.IsType<CreatedAtActionResult>(result.Result);
     }
 
@@ -106,18 +109,20 @@ public class CreateAsync
         // Arrange
         IItemService _service = Substitute.For<IItemService>();
         ILogger<ItemsController> _logger = Substitute.For<ILogger<ItemsController>>();
+        IFormFile _image = new FormFile(new MemoryStream(), 0, 0, "name", "image.png");
+
         ItemsController itemsController = new ItemsController(_service, _logger);
 
         string name = RandomString.Random(3, 255);
-        var model = new CreateItemRequest { Name = name, Price = 10, TaxPercentage = 1 };
+        var model = new CreateItemRequest { Name = name, Price = 10, TaxPercentage = 1, Image = _image };
 
-        _service.CreateAsync(name, model.Price, model.TaxPercentage).Returns(new Optional<ItemDTO>(new BadRequestException("Name already exists")));
+        _service.CreateAsync(name, model.Price, model.TaxPercentage, Arg.Any<string>()).Returns(new Optional<ItemDTO>(new BadRequestException("Name already exists")));
 
         // Act
         var result = await itemsController.CreateAsync(model);
 
         // Assert
-        await _service.Received().CreateAsync(Arg.Any<string>(), Arg.Any<decimal>(), Arg.Any<decimal>());
+        await _service.Received().CreateAsync(Arg.Any<string>(), Arg.Any<decimal>(), Arg.Any<decimal>(), Arg.Any<string>());
         Assert.IsType<BadRequestObjectResult>(result.Result);
     }
 }

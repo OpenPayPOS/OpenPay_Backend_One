@@ -4,7 +4,8 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using NSubstitute;
-using OpenPay.Api.Models.Request;
+using OpenPay.Api.V1.Models.Request;
+using OpenPay.Api.V1.Controllers;
 using OpenPay.Interfaces.Services;
 using OpenPay.Interfaces.Services.ServiceModels;
 using OpenPay.Tests.Api.Helpers;
@@ -81,7 +82,7 @@ public class CreateAsync
         IItemService _service = Substitute.For<IItemService>();
         ILogger<ItemsController> _logger = Substitute.For<ILogger<ItemsController>>();
         ItemsController itemsController = new ItemsController(_service, _logger);
-        IFormFile _image = new FormFile(new MemoryStream(), 0, 0, "name", "image.png");
+        IFormFile _image = new FormFile(new MemoryStream(), 0, 0, "image.png", "image.png");
 
         var model = new CreateItemRequest { Name = RandomString.Random(3, 255), Price = 10, TaxPercentage = 1, Image = _image };
 

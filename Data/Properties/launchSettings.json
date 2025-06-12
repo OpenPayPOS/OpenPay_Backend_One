@@ -4,7 +4,25 @@
       "commandName": "Project",
       "launchBrowser": true,
       "environmentVariables": {
-        "ASPNETCORE_ENVIRONMENT": "Development"
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "DB_HOST": "localhost",
+        "DB_PORT": "5432",
+        "DB_NAME": "openpay_main",
+        "DB_USER": "postgres",
+        "DB_PASSWORD": "3iYvGvz9"
+      },
+      "applicationUrl": "https://localhost:62008;http://localhost:62009"
+    },
+    "Docker": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "DB_HOST": "db",
+        "DB_PORT": "5432",
+        "DB_NAME": "openpay_db",
+        "DB_USER": "postgres",
+        "DB_PASSWORD": "postgres"
       },
       "applicationUrl": "https://localhost:62008;http://localhost:62009"
     }

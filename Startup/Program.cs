@@ -5,6 +5,15 @@ using OpenPay.Api.Configuration;
 
 var builder = WebApplication.CreateBuilder(args);
 
+builder.WebHost.ConfigureKestrel(options =>
+{
+    options.ListenAnyIP(8080);
+    options.ListenAnyIP(8081, options =>
+    {
+        options.UseHttps(Environment.GetEnvironmentVariable("CERTIFICATE_PATH"), Environment.GetEnvironmentVariable("CERTIFICATE_PASSWORD"));
+    });
+});
+
 builder.Services.AddControllers(options =>
 {
     options.SuppressAsyncSuffixInActionNames = false;
@@ -40,12 +49,18 @@ builder.Services.AddSwaggerGen(c =>
 
 var app = builder.Build();
 
+if (app.Environment.EnvironmentName == "migrate")
+{
+    app.Services.SetupDataServices();
+    app.Environment.EnvironmentName = "Development";
+}
+
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI(c =>
     {
-        c.SwaggerEndpoint("/swagger/v1/swagger.json", "My Api v1");
+        c.SwaggerEndpoint("/swagger/v1/swagger.json", "My Api v1");//test
     });
 }
 

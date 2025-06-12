@@ -1,4 +1,4 @@
-﻿namespace OpenPay.Api.Models.Response;
+﻿namespace OpenPay.Api.V1.Models.Response;
 public class OrderResponse
 {
     public List<OrderItemResponse> OrderItems { get; set; }

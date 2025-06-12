@@ -5,6 +5,8 @@ using Microsoft.Extensions.Logging;
 using NSubstitute;
 using OpenPay.Interfaces.Services.ServiceModels;
 using OpenPay.Interfaces.Services;
+using OpenPay.Api.V1.Controllers;
+using OpenPay.Api.V1.Models.Response;
 
 namespace OpenPay.Tests.Api.Controllers.OrderController;
 public class GetByIdAsync

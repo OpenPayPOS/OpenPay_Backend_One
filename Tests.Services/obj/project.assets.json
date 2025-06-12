@@ -7087,11 +7087,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\marti\\Code\\OpenPay\\V1\\Backend\\Tests.Services\\Tests.Services.csproj",
+      "projectUniqueName": "C:\\Users\\marti\\Code\\OpenPay\\V1\\OpenPay_Backend\\Tests.Services\\Tests.Services.csproj",
       "projectName": "OpenPay.Tests.Services",
-      "projectPath": "C:\\Users\\marti\\Code\\OpenPay\\V1\\Backend\\Tests.Services\\Tests.Services.csproj",
+      "projectPath": "C:\\Users\\marti\\Code\\OpenPay\\V1\\OpenPay_Backend\\Tests.Services\\Tests.Services.csproj",
       "packagesPath": "C:\\Users\\marti\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\marti\\Code\\OpenPay\\V1\\Backend\\Tests.Services\\obj\\",
+      "outputPath": "C:\\Users\\marti\\Code\\OpenPay\\V1\\OpenPay_Backend\\Tests.Services\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\marti\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -7108,14 +7108,14 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\marti\\Code\\OpenPay\\V1\\Backend\\Interfaces.Common\\Interfaces.Common.csproj": {
-              "projectPath": "C:\\Users\\marti\\Code\\OpenPay\\V1\\Backend\\Interfaces.Common\\Interfaces.Common.csproj"
+            "C:\\Users\\marti\\Code\\OpenPay\\V1\\OpenPay_Backend\\Interfaces.Common\\Interfaces.Common.csproj": {
+              "projectPath": "C:\\Users\\marti\\Code\\OpenPay\\V1\\OpenPay_Backend\\Interfaces.Common\\Interfaces.Common.csproj"
             },
-            "C:\\Users\\marti\\Code\\OpenPay\\V1\\Backend\\Interfaces.Data\\Interfaces.Data.csproj": {
-              "projectPath": "C:\\Users\\marti\\Code\\OpenPay\\V1\\Backend\\Interfaces.Data\\Interfaces.Data.csproj"
+            "C:\\Users\\marti\\Code\\OpenPay\\V1\\OpenPay_Backend\\Interfaces.Data\\Interfaces.Data.csproj": {
+              "projectPath": "C:\\Users\\marti\\Code\\OpenPay\\V1\\OpenPay_Backend\\Interfaces.Data\\Interfaces.Data.csproj"
             },
-            "C:\\Users\\marti\\Code\\OpenPay\\V1\\Backend\\Services\\Services.csproj": {
-              "projectPath": "C:\\Users\\marti\\Code\\OpenPay\\V1\\Backend\\Services\\Services.csproj"
+            "C:\\Users\\marti\\Code\\OpenPay\\V1\\OpenPay_Backend\\Services\\Services.csproj": {
+              "projectPath": "C:\\Users\\marti\\Code\\OpenPay\\V1\\OpenPay_Backend\\Services\\Services.csproj"
             }
           }
         }

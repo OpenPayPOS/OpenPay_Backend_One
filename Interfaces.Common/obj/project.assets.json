@@ -4168,11 +4168,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\marti\\Code\\OpenPay\\V1\\Backend\\Interfaces.Common\\Interfaces.Common.csproj",
+      "projectUniqueName": "C:\\Users\\marti\\Code\\OpenPay\\V1\\OpenPay_Backend\\Interfaces.Common\\Interfaces.Common.csproj",
       "projectName": "Interfaces.Common",
-      "projectPath": "C:\\Users\\marti\\Code\\OpenPay\\V1\\Backend\\Interfaces.Common\\Interfaces.Common.csproj",
+      "projectPath": "C:\\Users\\marti\\Code\\OpenPay\\V1\\OpenPay_Backend\\Interfaces.Common\\Interfaces.Common.csproj",
       "packagesPath": "C:\\Users\\marti\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\marti\\Code\\OpenPay\\V1\\Backend\\Interfaces.Common\\obj\\",
+      "outputPath": "C:\\Users\\marti\\Code\\OpenPay\\V1\\OpenPay_Backend\\Interfaces.Common\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\marti\\AppData\\Roaming\\NuGet\\NuGet.Config",

@@ -4,6 +4,8 @@ public struct OrderDTO
     public Guid Id { get; set; }
     public List<OrderItemDTO> OrderItems { get; set; }
     public DateTime CreatedTime { get; set; }
+    public UserAccountDTO? OrderedAccount { get; set; }
+    public UserDTO? UserCreated { get; set; }
 }
 
 public struct OrderItemDTO

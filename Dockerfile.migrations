@@ -1,0 +1,39 @@
+# Development-focused Dockerfile
+FROM mcr.microsoft.com/dotnet/sdk:8.0
+
+# Install OpenSSL for certificate generation
+RUN apt-get update && apt-get install -y openssl
+
+# Copy the certificate to a known location
+RUN mkdir -p /app/certificates
+COPY ["Startup/certificates/aspnetapp.pfx", "app/certificates"]
+
+# Set environment variables
+ENV DB_HOST=db
+ENV DB_PORT=5432
+ENV DB_USER=postgres
+ENV DB_PASSWORD=postgres
+ENV DB_NAME=openpay_db
+ENV FILE_UPLOAD_PATH=/uploads
+ENV CERTIFICATE_PASSWORD="password"
+
+# Set working directory to the Startup project
+WORKDIR /app/Data
+
+# Copy only project files first to leverage layer caching
+COPY ["Interfaces.Common/Interfaces.Common.csproj", "../Interfaces.Common/"]
+COPY ["Data/Data.csproj", "."]
+COPY ["Interfaces.Data/Interfaces.Data.csproj", "../Interfaces.Data/"]
+
+# Restore dependencies
+RUN dotnet restore
+
+# Copy the rest of the code
+COPY . .
+
+# Ensure the working directory is correct for the Startup project
+WORKDIR /app
+
+RUN dotnet tool install --global dotnet-ef
+ENV PATH="$PATH:/root/.dotnet/tools"
+RUN dotnet ef database update --project Data/Data.csproj

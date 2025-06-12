@@ -3,6 +3,7 @@ using Interfaces.Common.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using NSubstitute;
+using OpenPay.Api.V1.Controllers;
 using OpenPay.Interfaces.Services;
 
 namespace OpenPay.Tests.Api.Controllers.ItemController;

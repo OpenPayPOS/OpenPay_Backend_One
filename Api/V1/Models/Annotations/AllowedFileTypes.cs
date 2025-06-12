@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
 using System.ComponentModel.DataAnnotations;
 
-namespace OpenPay.Api.Models.Annotations;
+namespace OpenPay.Api.V1.Models.Annotations;
 public class AllowedFileTypes : ValidationAttribute
 {
     private readonly string[] _extensions;

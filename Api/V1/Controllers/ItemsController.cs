@@ -1,16 +1,14 @@
-﻿namespace OpenPay.Api.Controllers;
+﻿namespace OpenPay.Api.V1.Controllers;
 
-using OpenPay.Api.Utils;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using OpenPay.Api.Models.Request;
-using OpenPay.Api.Models.Response;
 using OpenPay.Interfaces.Services;
 using OpenPay.Interfaces.Services.ServiceModels;
 using OpenPay.Api.Mappers;
-using OpenPay.Api.Controllers.Common;
-using Microsoft.AspNetCore.Authorization;
+using OpenPay.Api.V1.Controllers.Common;
+using OpenPay.Api.V1.Models.Request;
+using OpenPay.Api.V1.Models.Response;
 
 [Route("api/v1/[controller]")]
 [ApiController]
@@ -20,20 +18,20 @@ public class ItemsController : BaseController<ItemDTO, ItemResponse>
     private readonly ILogger<ItemsController> _logger;
 
     public ItemsController(IItemService itemService, ILogger<ItemsController> logger)
-        : base (itemService, logger, new ItemMapper())
+        : base(itemService, logger, new ItemMapper())
     {
         _itemService = itemService;
         _logger = logger;
     }
 
     [HttpGet]
-    [ProducesResponseType(StatusCodes.Status200OK)]
+    [ProducesResponseType<ItemResponse>(StatusCodes.Status200OK)]
     public async IAsyncEnumerable<ItemResponse> GetAllAsync()
     {
         await foreach (var item in _itemService.GetAllAsync())
         {
             yield return await _mapper.MapDtoToModelAsync(item);
-        } 
+        }
     }
 
     [HttpPost]
@@ -42,23 +40,24 @@ public class ItemsController : BaseController<ItemDTO, ItemResponse>
     public async Task<ActionResult<ItemResponse>> CreateAsync([FromForm] CreateItemRequest item)
     {
         var file = item.Image;
-        var slnPath = Directory.GetParent(Directory.GetCurrentDirectory()).ToString();
-        var uploadFolder = Path.Combine(slnPath, "ImageServer", "wwwroot", "uploads");
+        var fileServerPath = Environment.GetEnvironmentVariable("FILE_SERVER_PATH") ?? "uploads";
 
-        if (!Directory.Exists(uploadFolder))
+        if (!Directory.Exists(fileServerPath))
         {
-            Directory.CreateDirectory(uploadFolder);
+            Directory.CreateDirectory(fileServerPath);
         }
 
         string guid = Guid.NewGuid().ToString();
         string fileType = file.FileName.Split('.').Reverse().ToList()[0];
-        var filePath = Path.Combine(uploadFolder, $"{guid}.{fileType}");
-        using (var fileStream = new FileStream(filePath, FileMode.Create))
+        var filePath = Path.Combine(Environment.GetEnvironmentVariable("FILE_ROUTE") ?? "", $"{guid}.{fileType}");
+        var fullFilePath = Path.Combine(fileServerPath, filePath);
+        await Console.Out.WriteLineAsync(fullFilePath);
+        using (var fileStream = new FileStream(fullFilePath, FileMode.Create))
         {
             await file.CopyToAsync(fileStream).ConfigureAwait(false);
         }
 
-        var itemOptional = await _itemService.CreateAsync(item.Name, item.Price, item.TaxPercentage, $"{guid}.{fileType}");
+        var itemOptional = await _itemService.CreateAsync(item.Name, item.Price, item.TaxPercentage, Environment.GetEnvironmentVariable("FILE_ROUTE") + $"/{guid}.{fileType}");
 
         return await itemOptional.ProduceResultAsync(async itemDTO =>
         {

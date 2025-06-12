@@ -4,13 +4,13 @@ using OpenPay.Api.Mappers;
 using OpenPay.Api.Utils;
 using OpenPay.Interfaces.Services.Common;
 
-namespace OpenPay.Api.Controllers.Common;
+namespace OpenPay.Api.V1.Controllers.Common;
 
 // TODO: edit controller tests to seperate base controller tests
 public class BaseController<TDTO, TModel> : ControllerBase where TDTO : struct
 {
     private readonly IBaseService<TDTO> _service;
-    private readonly ILogger<BaseController<TDTO,TModel>> _logger;
+    private readonly ILogger<BaseController<TDTO, TModel>> _logger;
     protected readonly IMapper<TModel, TDTO> _mapper;
     protected readonly ExceptionHandler _exceptionHandler;
 

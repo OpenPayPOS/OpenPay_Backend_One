@@ -3,10 +3,11 @@ using Interfaces.Common.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using NSubstitute;
-using OpenPay.Api.Models.Request;
 using OpenPay.Interfaces.Services.ServiceModels;
 using OpenPay.Interfaces.Services;
 using OpenPay.Tests.Api.Helpers;
+using OpenPay.Api.V1.Controllers;
+using OpenPay.Api.V1.Models.Request;
 
 namespace OpenPay.Tests.Api.Controllers.OrderController;
 public class CreateAsync

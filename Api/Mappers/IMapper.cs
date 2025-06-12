@@ -1,4 +1,4 @@
-﻿using OpenPay.Api.Models.Response;
+﻿using OpenPay.Api.V1.Models.Response;
 using OpenPay.Interfaces.Services.ServiceModels;
 
 namespace OpenPay.Api.Mappers;

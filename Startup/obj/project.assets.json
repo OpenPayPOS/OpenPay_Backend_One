@@ -4344,11 +4344,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\marti\\Code\\OpenPay\\V1\\Backend\\Startup\\Startup.csproj",
+      "projectUniqueName": "C:\\Users\\marti\\Code\\OpenPay\\V1\\OpenPay_Backend\\Startup\\Startup.csproj",
       "projectName": "OpenPay.Startup",
-      "projectPath": "C:\\Users\\marti\\Code\\OpenPay\\V1\\Backend\\Startup\\Startup.csproj",
+      "projectPath": "C:\\Users\\marti\\Code\\OpenPay\\V1\\OpenPay_Backend\\Startup\\Startup.csproj",
       "packagesPath": "C:\\Users\\marti\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\marti\\Code\\OpenPay\\V1\\Backend\\Startup\\obj\\",
+      "outputPath": "C:\\Users\\marti\\Code\\OpenPay\\V1\\OpenPay_Backend\\Startup\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\marti\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -4365,14 +4365,14 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\marti\\Code\\OpenPay\\V1\\Backend\\Api\\Api.csproj": {
-              "projectPath": "C:\\Users\\marti\\Code\\OpenPay\\V1\\Backend\\Api\\Api.csproj"
+            "C:\\Users\\marti\\Code\\OpenPay\\V1\\OpenPay_Backend\\Api\\Api.csproj": {
+              "projectPath": "C:\\Users\\marti\\Code\\OpenPay\\V1\\OpenPay_Backend\\Api\\Api.csproj"
             },
-            "C:\\Users\\marti\\Code\\OpenPay\\V1\\Backend\\Data\\Data.csproj": {
-              "projectPath": "C:\\Users\\marti\\Code\\OpenPay\\V1\\Backend\\Data\\Data.csproj"
+            "C:\\Users\\marti\\Code\\OpenPay\\V1\\OpenPay_Backend\\Data\\Data.csproj": {
+              "projectPath": "C:\\Users\\marti\\Code\\OpenPay\\V1\\OpenPay_Backend\\Data\\Data.csproj"
             },
-            "C:\\Users\\marti\\Code\\OpenPay\\V1\\Backend\\Services\\Services.csproj": {
-              "projectPath": "C:\\Users\\marti\\Code\\OpenPay\\V1\\Backend\\Services\\Services.csproj"
+            "C:\\Users\\marti\\Code\\OpenPay\\V1\\OpenPay_Backend\\Services\\Services.csproj": {
+              "projectPath": "C:\\Users\\marti\\Code\\OpenPay\\V1\\OpenPay_Backend\\Services\\Services.csproj"
             }
           }
         }

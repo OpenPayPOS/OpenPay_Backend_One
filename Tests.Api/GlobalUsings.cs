@@ -1,2 +1,2 @@
-﻿global using OpenPay.Api.Controllers;
-global using OpenPay.Api.Models.Response;
+﻿global using OpenPay.Api.V1.Controllers;
+global using OpenPay.Api.V1.Models.Response;

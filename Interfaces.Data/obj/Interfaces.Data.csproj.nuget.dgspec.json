@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\marti\\Code\\OpenPay\\V1\\Backend\\Interfaces.Data\\Interfaces.Data.csproj": {}
+    "C:\\Users\\marti\\Code\\OpenPay\\V1\\OpenPay_Backend\\Interfaces.Data\\Interfaces.Data.csproj": {}
   },
   "projects": {
-    "C:\\Users\\marti\\Code\\OpenPay\\V1\\Backend\\Interfaces.Common\\Interfaces.Common.csproj": {
+    "C:\\Users\\marti\\Code\\OpenPay\\V1\\OpenPay_Backend\\Interfaces.Common\\Interfaces.Common.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\marti\\Code\\OpenPay\\V1\\Backend\\Interfaces.Common\\Interfaces.Common.csproj",
+        "projectUniqueName": "C:\\Users\\marti\\Code\\OpenPay\\V1\\OpenPay_Backend\\Interfaces.Common\\Interfaces.Common.csproj",
         "projectName": "Interfaces.Common",
-        "projectPath": "C:\\Users\\marti\\Code\\OpenPay\\V1\\Backend\\Interfaces.Common\\Interfaces.Common.csproj",
+        "projectPath": "C:\\Users\\marti\\Code\\OpenPay\\V1\\OpenPay_Backend\\Interfaces.Common\\Interfaces.Common.csproj",
         "packagesPath": "C:\\Users\\marti\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\marti\\Code\\OpenPay\\V1\\Backend\\Interfaces.Common\\obj\\",
+        "outputPath": "C:\\Users\\marti\\Code\\OpenPay\\V1\\OpenPay_Backend\\Interfaces.Common\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\marti\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -70,14 +70,14 @@
         }
       }
     },
-    "C:\\Users\\marti\\Code\\OpenPay\\V1\\Backend\\Interfaces.Data\\Interfaces.Data.csproj": {
+    "C:\\Users\\marti\\Code\\OpenPay\\V1\\OpenPay_Backend\\Interfaces.Data\\Interfaces.Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\marti\\Code\\OpenPay\\V1\\Backend\\Interfaces.Data\\Interfaces.Data.csproj",
+        "projectUniqueName": "C:\\Users\\marti\\Code\\OpenPay\\V1\\OpenPay_Backend\\Interfaces.Data\\Interfaces.Data.csproj",
         "projectName": "OpenPay.Interfaces.Data",
-        "projectPath": "C:\\Users\\marti\\Code\\OpenPay\\V1\\Backend\\Interfaces.Data\\Interfaces.Data.csproj",
+        "projectPath": "C:\\Users\\marti\\Code\\OpenPay\\V1\\OpenPay_Backend\\Interfaces.Data\\Interfaces.Data.csproj",
         "packagesPath": "C:\\Users\\marti\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\marti\\Code\\OpenPay\\V1\\Backend\\Interfaces.Data\\obj\\",
+        "outputPath": "C:\\Users\\marti\\Code\\OpenPay\\V1\\OpenPay_Backend\\Interfaces.Data\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\marti\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -94,8 +94,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\marti\\Code\\OpenPay\\V1\\Backend\\Interfaces.Common\\Interfaces.Common.csproj": {
-                "projectPath": "C:\\Users\\marti\\Code\\OpenPay\\V1\\Backend\\Interfaces.Common\\Interfaces.Common.csproj"
+              "C:\\Users\\marti\\Code\\OpenPay\\V1\\OpenPay_Backend\\Interfaces.Common\\Interfaces.Common.csproj": {
+                "projectPath": "C:\\Users\\marti\\Code\\OpenPay\\V1\\OpenPay_Backend\\Interfaces.Common\\Interfaces.Common.csproj"
               }
             }
           }

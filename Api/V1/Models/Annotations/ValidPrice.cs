@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace OpenPay.Api.Models.Annotations;
+namespace OpenPay.Api.V1.Models.Annotations;
 
 public class ValidPrice : ValidationAttribute
 {
@@ -18,6 +18,6 @@ public class ValidPrice : ValidationAttribute
             d = valueConvertible.ToDecimal(null);
         }
 
-        return Decimal.Round(d, 2) == d;
+        return decimal.Round(d, 2) == d;
     }
 }

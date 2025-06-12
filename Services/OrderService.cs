@@ -20,6 +20,7 @@ public class OrderService : BaseService<Order, OrderDTO, OrderDataDTO>, IOrderSe
         IUnitOfWork unitOfWork, IInternalItemService itemService)
         : base(repository, logger, unitOfWork)
     {
+        _orderRepository = repository;
         _itemService = itemService;
     }
 
@@ -31,9 +32,9 @@ public class OrderService : BaseService<Order, OrderDTO, OrderDataDTO>, IOrderSe
 
             if (existsOptional.IsInvalid) return (Exception)existsOptional;
 
-            if (existsOptional.Handle(exists => exists, _ => throw new Exception()))
+            if (existsOptional.Handle(exists => !exists, _ => throw new Exception()))
             {
-                return new BadRequestException("Item with that name already in system.");
+                return new BadRequestException("Item with that id does not exist.");
             }
         }
         // From here we are sure all ID's exist

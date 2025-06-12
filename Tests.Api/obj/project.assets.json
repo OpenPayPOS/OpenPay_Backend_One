@@ -7155,11 +7155,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\marti\\Code\\OpenPay\\V1\\Backend\\Tests.Api\\Tests.Api.csproj",
+      "projectUniqueName": "C:\\Users\\marti\\Code\\OpenPay\\V1\\OpenPay_Backend\\Tests.Api\\Tests.Api.csproj",
       "projectName": "OpenPay.Tests.Api",
-      "projectPath": "C:\\Users\\marti\\Code\\OpenPay\\V1\\Backend\\Tests.Api\\Tests.Api.csproj",
+      "projectPath": "C:\\Users\\marti\\Code\\OpenPay\\V1\\OpenPay_Backend\\Tests.Api\\Tests.Api.csproj",
       "packagesPath": "C:\\Users\\marti\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\marti\\Code\\OpenPay\\V1\\Backend\\Tests.Api\\obj\\",
+      "outputPath": "C:\\Users\\marti\\Code\\OpenPay\\V1\\OpenPay_Backend\\Tests.Api\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\marti\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -7176,8 +7176,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\marti\\Code\\OpenPay\\V1\\Backend\\Api\\Api.csproj": {
-              "projectPath": "C:\\Users\\marti\\Code\\OpenPay\\V1\\Backend\\Api\\Api.csproj"
+            "C:\\Users\\marti\\Code\\OpenPay\\V1\\OpenPay_Backend\\Api\\Api.csproj": {
+              "projectPath": "C:\\Users\\marti\\Code\\OpenPay\\V1\\OpenPay_Backend\\Api\\Api.csproj"
             }
           }
         }

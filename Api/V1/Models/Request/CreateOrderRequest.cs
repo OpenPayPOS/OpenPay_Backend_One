@@ -1,7 +1,7 @@
-﻿using OpenPay.Api.Models.Annotations;
+﻿using OpenPay.Api.V1.Models.Annotations;
 using System.ComponentModel.DataAnnotations;
 
-namespace OpenPay.Api.Models.Request;
+namespace OpenPay.Api.V1.Models.Request;
 public class CreateOrderRequest
 {
     [Required(ErrorMessage = "Items are required.")]

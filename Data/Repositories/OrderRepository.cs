@@ -32,6 +32,7 @@ public class OrderRepository : BaseRepository<OrderDataModel, OrderDataDTO>, IOr
             });
         }
 
+        orderDataModel.OrderItems = orderItems;
         await _set.AddAsync(orderDataModel);
 
         return _mapper.MapToDataDTO(orderDataModel);

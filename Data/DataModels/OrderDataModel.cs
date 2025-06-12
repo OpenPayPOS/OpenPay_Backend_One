@@ -7,5 +7,5 @@ namespace OpenPay.Data.DataModels;
 public class OrderDataModel : BaseDataModel
 {
     [InverseProperty("Order")]
-    public ICollection<OrderItemDataModel> OrderItems { get; } = new List<OrderItemDataModel>();
+    public ICollection<OrderItemDataModel> OrderItems { get; set; } = new List<OrderItemDataModel>();
 }

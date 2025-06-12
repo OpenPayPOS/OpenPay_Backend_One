@@ -4,6 +4,8 @@ using Interfaces.Common.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using NSubstitute;
+using OpenPay.Api.V1.Controllers;
+using OpenPay.Api.V1.Models.Response;
 using OpenPay.Interfaces.Services;
 using OpenPay.Interfaces.Services.ServiceModels;
 

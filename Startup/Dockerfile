@@ -13,6 +13,9 @@ COPY ["Startup/Startup.csproj", "Startup/"]
 COPY ["Api/Api.csproj", "Api/"]
 COPY ["Interfaces.Services/Interfaces.Services.csproj", "Interfaces.Services/"]
 COPY ["Interfaces.Common/Interfaces.Common.csproj", "Interfaces.Common/"]
+COPY ["Data/Data.csproj", "Data/"]
+COPY ["Interfaces.Data/Interfaces.Data.csproj", "Interfaces.Data/"]
+COPY ["Services/Services.csproj", "Services/"]
 RUN dotnet restore "./Startup/Startup.csproj"
 COPY . .
 WORKDIR "/src/Startup"
@@ -25,4 +28,4 @@ RUN dotnet publish "./Startup.csproj" -c $BUILD_CONFIGURATION -o /app/publish /p
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
-ENTRYPOINT ["dotnet", "OpenPay.Startup.dll"]
+ENTRYPOINT ["dotnet", "Startup.dll"]

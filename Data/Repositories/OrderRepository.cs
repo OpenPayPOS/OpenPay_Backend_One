@@ -18,7 +18,7 @@ public class OrderRepository : BaseRepository<OrderDataModel, OrderDataDTO>, IOr
 
     public async Task<Optional<OrderDataDTO>> CreateAsync(CreateOrderDataDTO orderDataDTO)
     {
-        OrderDataModel orderDataModel = new OrderDataModel { Id = orderDataDTO.Id };
+        OrderDataModel orderDataModel = new OrderDataModel { Id = orderDataDTO.Id, OrderPlaced = DateTime.UtcNow };
         List<OrderItemDataModel> orderItems = new List<OrderItemDataModel>();
         
         foreach (var orderItem in orderDataDTO.OrderItems)

@@ -8,4 +8,6 @@ public class OrderDataModel : BaseDataModel
 {
     [InverseProperty("Order")]
     public ICollection<OrderItemDataModel> OrderItems { get; set; } = new List<OrderItemDataModel>();
+
+    public DateTime OrderPlaced { get; set; }
 }
